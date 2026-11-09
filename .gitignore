@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Large data — regenerable via src/generate_data.py (seed 42)
+data/raw/*.parquet
+data/processed/*.parquet
+outputs/cleaning_logs/changed_records.parquet
+# Keep samples and aggregates in the repo instead
+
+# OS / editor
+.DS_Store
+.vscode/
+*.tmp

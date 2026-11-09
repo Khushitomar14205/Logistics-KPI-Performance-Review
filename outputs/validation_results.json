@@ -1,0 +1,310 @@
+{
+  "passed": 38,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Raw shipment rows",
+      "expected": 304500,
+      "actual": 304500,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Clean shipment rows",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Shipments removed = injected duplicates",
+      "expected": 4500,
+      "actual": 4500,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Raw scan rows",
+      "expected": 1200000,
+      "actual": 1200000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Clean scan rows",
+      "expected": 1194000,
+      "actual": 1194000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Scans removed = orphan scans",
+      "expected": 6000,
+      "actual": 6000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Total raw records",
+      "expected": 1504500,
+      "actual": 1504500,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Total clean records",
+      "expected": 1494000,
+      "actual": 1494000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Trusted table rows = clean shipments",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Trusted table unique shipment_ids",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "OTD % (recomputed vs kpi_summary)",
+      "expected": 76.48,
+      "actual": 76.48,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "OTD eligible denominator",
+      "expected": 268330,
+      "actual": 268330,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Late deliveries",
+      "expected": 63118,
+      "actual": 63118,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Cost per shipment INR (recomputed)",
+      "expected": 4102.68,
+      "actual": 4102.68,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Total valid cost INR (recomputed)",
+      "expected": 1204074833.69,
+      "actual": 1204074833.69,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Valid-cost shipments",
+      "expected": 293485,
+      "actual": 293485,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Avg destination dwell h (recomputed)",
+      "expected": 15.49,
+      "actual": 15.49,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Avg origin dwell h (recomputed)",
+      "expected": 2.5,
+      "actual": 2.5,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Monthly shipments sum = total",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Monthly eligible sum = overall eligible",
+      "expected": 268330,
+      "actual": 268330,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Destination-hub shipments sum = total",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Route shipments sum = total",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Category shipments sum = total",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Warehouse shipments sum = total",
+      "expected": 300000,
+      "actual": 300000,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Origin hubs all in Dim_Hub",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Destination hubs all in Dim_Hub",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Routes all in Dim_Route (+UNKNOWN)",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Vehicles all in Dim_Vehicle (+UNKNOWN/Unknown)",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Warehouses all in Dim_Warehouse",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "No negative costs in valid-cost set",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "No negative dwell in valid dwell set",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Cleaning log has one row per issue type",
+      "expected": 19,
+      "actual": 19,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Changed records logged (>0)",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Changed records cover duplicate removals",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Changed records cover orphan scans (distinct shipment ids)",
+      "expected": true,
+      "actual": true,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    },
+    {
+      "check": "Duplicate shipment_ids remaining in trusted table",
+      "expected": 0,
+      "actual": 0,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Shipments with out-of-order scans after cleaning",
+      "expected": 0,
+      "actual": 0,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Total valid cost, raw-file recomputation vs trusted table",
+      "expected": 1204074833.69,
+      "actual": 1204074833.69,
+      "variance_pct": 0.0,
+      "tolerance_pct": 0.5,
+      "status": "PASS"
+    }
+  ]
+}

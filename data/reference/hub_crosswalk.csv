@@ -1,0 +1,61 @@
+raw_hub_id,canonical_hub_id,hub_name,state
+KOL-01,KOL,Kolkata,West Bengal
+kol_1,KOL,Kolkata,West Bengal
+Kolkata Hub 1,KOL,Kolkata,West Bengal
+KOLKATA,KOL,Kolkata,West Bengal
+hub-kol,KOL,Kolkata,West Bengal
+HWH-01,HWH,Howrah,West Bengal
+hwh_1,HWH,Howrah,West Bengal
+Howrah Hub 1,HWH,Howrah,West Bengal
+HOWRAH,HWH,Howrah,West Bengal
+hub-hwh,HWH,Howrah,West Bengal
+SIL-01,SIL,Siliguri,West Bengal
+sil_1,SIL,Siliguri,West Bengal
+Siliguri Hub 1,SIL,Siliguri,West Bengal
+SILIGURI,SIL,Siliguri,West Bengal
+hub-sil,SIL,Siliguri,West Bengal
+DGP-01,DGP,Durgapur,West Bengal
+dgp_1,DGP,Durgapur,West Bengal
+Durgapur Hub 1,DGP,Durgapur,West Bengal
+DURGAPUR,DGP,Durgapur,West Bengal
+hub-dgp,DGP,Durgapur,West Bengal
+ASN-01,ASN,Asansol,West Bengal
+asn_1,ASN,Asansol,West Bengal
+Asansol Hub 1,ASN,Asansol,West Bengal
+ASANSOL,ASN,Asansol,West Bengal
+hub-asn,ASN,Asansol,West Bengal
+MLD-01,MLD,Malda,West Bengal
+mld_1,MLD,Malda,West Bengal
+Malda Hub 1,MLD,Malda,West Bengal
+MALDA,MLD,Malda,West Bengal
+hub-mld,MLD,Malda,West Bengal
+GAU-01,GAU,Guwahati,Assam
+gau_1,GAU,Guwahati,Assam
+Guwahati Hub 1,GAU,Guwahati,Assam
+GUWAHATI,GAU,Guwahati,Assam
+hub-gau,GAU,Guwahati,Assam
+PAT-01,PAT,Patna,Bihar
+pat_1,PAT,Patna,Bihar
+Patna Hub 1,PAT,Patna,Bihar
+PATNA,PAT,Patna,Bihar
+hub-pat,PAT,Patna,Bihar
+RNC-01,RNC,Ranchi,Jharkhand
+rnc_1,RNC,Ranchi,Jharkhand
+Ranchi Hub 1,RNC,Ranchi,Jharkhand
+RANCHI,RNC,Ranchi,Jharkhand
+hub-rnc,RNC,Ranchi,Jharkhand
+JSR-01,JSR,Jamshedpur,Jharkhand
+jsr_1,JSR,Jamshedpur,Jharkhand
+Jamshedpur Hub 1,JSR,Jamshedpur,Jharkhand
+JAMSHEDPUR,JSR,Jamshedpur,Jharkhand
+hub-jsr,JSR,Jamshedpur,Jharkhand
+BBS-01,BBS,Bhubaneswar,Odisha
+bbs_1,BBS,Bhubaneswar,Odisha
+Bhubaneswar Hub 1,BBS,Bhubaneswar,Odisha
+BHUBANESWAR,BBS,Bhubaneswar,Odisha
+hub-bbs,BBS,Bhubaneswar,Odisha
+CTC-01,CTC,Cuttack,Odisha
+ctc_1,CTC,Cuttack,Odisha
+Cuttack Hub 1,CTC,Cuttack,Odisha
+CUTTACK,CTC,Cuttack,Odisha
+hub-ctc,CTC,Cuttack,Odisha

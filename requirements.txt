@@ -1,0 +1,12 @@
+# Logistics KPI Performance Review — Python dependencies
+# Install with: pip install -r requirements.txt  (inside the project venv)
+pandas
+numpy
+matplotlib
+openpyxl
+python-docx
+python-pptx
+pyarrow
+nbformat
+jupyter
+nbconvert

@@ -1,0 +1,7 @@
+table,column,dtype,total_records,missing_values,missing_pct,unique_values,duplicate_values,sample_values
+scan_events_raw,scan_event_id,str,1200000,0,0.0,1200000,0,SCN-0000001; SCN-0000002; SCN-0000003
+scan_events_raw,shipment_id,str,1200000,0,0.0,301643,898357,SHP-242692; SHP-071162; SHP-269408
+scan_events_raw,hub_id,str,1200000,0,0.0,72,1199928,HWH; JSR; MLD
+scan_events_raw,warehouse_id,str,1200000,0,0.0,24,1199976,WH-HWH-1; WH-JSR-2; WH-MLD-1
+scan_events_raw,scan_type,str,1200000,0,0.0,4,,Loading; Departure; Arrival
+scan_events_raw,scan_ts,str,1200000,0,0.0,921432,,2025-03-05T13:30:00+05:30; 2025-03-05T11:17:52Z; 2025-03-05T15:23:43Z

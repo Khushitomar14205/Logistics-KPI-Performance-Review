@@ -1,0 +1,270 @@
+{
+  "overall": {
+    "shipments": 300000,
+    "otd_eligible": 268330,
+    "otd_pct": 76.48,
+    "late_deliveries": 63118,
+    "cost_per_shipment_inr": 4102.68,
+    "total_valid_cost_inr": 1204074833.69,
+    "valid_cost_shipments": 293485,
+    "avg_dwell_dest_h": 15.49,
+    "avg_dwell_origin_h": 2.5,
+    "avg_dwell_combined_h": 8.9
+  },
+  "half_year": [
+    {
+      "shipments": 148699,
+      "otd_eligible": 132949,
+      "otd_pct": 76.49,
+      "late_deliveries": 31258,
+      "cost_per_shipment_inr": 4102.4,
+      "total_valid_cost_inr": 596989893.22,
+      "valid_cost_shipments": 145522,
+      "avg_dwell_dest_h": 15.49,
+      "avg_dwell_origin_h": 2.5,
+      "avg_dwell_combined_h": 8.9,
+      "half": "H1 2025"
+    },
+    {
+      "shipments": 151301,
+      "otd_eligible": 135381,
+      "otd_pct": 76.47,
+      "late_deliveries": 31860,
+      "cost_per_shipment_inr": 4102.95,
+      "total_valid_cost_inr": 607084940.47,
+      "valid_cost_shipments": 147963,
+      "avg_dwell_dest_h": 15.5,
+      "avg_dwell_origin_h": 2.5,
+      "avg_dwell_combined_h": 8.91,
+      "half": "H2 2025"
+    }
+  ],
+  "deciles": {
+    "shipments_bottom10pc_by_lateness": {
+      "count": 26833,
+      "mean_late_hours": 12.88,
+      "mean_cost_inr": 3983.53
+    },
+    "shipments_top10pc_by_earliness": {
+      "count": 26833,
+      "mean_late_hours": -12.09,
+      "mean_cost_inr": 4374.46
+    },
+    "routes_bottom10pc_otd": [
+      {
+        "route_id": "RT-006",
+        "shipments": 10938,
+        "otd_pct": 57.11,
+        "cost_per_shipment_inr": 4117.13
+      },
+      {
+        "route_id": "RT-017",
+        "shipments": 4784,
+        "otd_pct": 60.2,
+        "cost_per_shipment_inr": 4121.62
+      },
+      {
+        "route_id": "RT-028",
+        "shipments": 3658,
+        "otd_pct": 63.67,
+        "cost_per_shipment_inr": 4114.29
+      },
+      {
+        "route_id": "RT-005",
+        "shipments": 10869,
+        "otd_pct": 63.81,
+        "cost_per_shipment_inr": 4139.69
+      },
+      {
+        "route_id": "RT-050",
+        "shipments": 3063,
+        "otd_pct": 64.84,
+        "cost_per_shipment_inr": 4052.36
+      },
+      {
+        "route_id": "RT-039",
+        "shipments": 3359,
+        "otd_pct": 65.25,
+        "cost_per_shipment_inr": 4123.85
+      }
+    ],
+    "routes_top10pc_otd": [
+      {
+        "route_id": "RT-004",
+        "shipments": 10839,
+        "otd_pct": 82.83,
+        "cost_per_shipment_inr": 4054.0
+      },
+      {
+        "route_id": "RT-001",
+        "shipments": 11124,
+        "otd_pct": 82.84,
+        "cost_per_shipment_inr": 4099.23
+      },
+      {
+        "route_id": "RT-002",
+        "shipments": 11069,
+        "otd_pct": 83.04,
+        "cost_per_shipment_inr": 4078.14
+      },
+      {
+        "route_id": "RT-011",
+        "shipments": 10953,
+        "otd_pct": 83.31,
+        "cost_per_shipment_inr": 4088.83
+      },
+      {
+        "route_id": "RT-007",
+        "shipments": 10922,
+        "otd_pct": 83.34,
+        "cost_per_shipment_inr": 4134.2
+      },
+      {
+        "route_id": "RT-003",
+        "shipments": 10934,
+        "otd_pct": 83.41,
+        "cost_per_shipment_inr": 4095.39
+      }
+    ],
+    "warehouses_bottom10pc_dwell": [
+      {
+        "warehouse_id": "WH-CTC-1",
+        "shipments": 1513,
+        "avg_dwell_dest_h": 15.95,
+        "otd_pct": 77.84
+      },
+      {
+        "warehouse_id": "WH-MLD-2",
+        "shipments": 7496,
+        "avg_dwell_dest_h": 15.64,
+        "otd_pct": 78.14
+      }
+    ],
+    "warehouses_top10pc_dwell": [
+      {
+        "warehouse_id": "WH-HWH-2",
+        "shipments": 18007,
+        "avg_dwell_dest_h": 15.42,
+        "otd_pct": 75.31
+      },
+      {
+        "warehouse_id": "WH-JSR-1",
+        "shipments": 5935,
+        "avg_dwell_dest_h": 15.21,
+        "otd_pct": 76.06
+      }
+    ]
+  },
+  "contribution": {
+    "late_deliveries_total": 63118,
+    "late_share_by_route_top5_pct": {
+      "RT-006": 6.63,
+      "RT-005": 5.58,
+      "RT-008": 4.67,
+      "RT-009": 3.92,
+      "RT-010": 3.76
+    },
+    "late_share_by_dest_hub_pct": {
+      "GAU": 16.42,
+      "MLD": 14.02,
+      "RNC": 11.32,
+      "BBS": 9.53,
+      "JSR": 9.43,
+      "CTC": 6.3,
+      "ASN": 5.9,
+      "PAT": 5.81,
+      "SIL": 5.81,
+      "DGP": 5.8,
+      "HWH": 5.55,
+      "KOL": 4.11
+    },
+    "late_share_by_category_pct": {
+      "Frozen": 33.1,
+      "Chilled": 25.45,
+      "Ambient": 17.43,
+      "Dairy": 15.91,
+      "Pharma": 7.82,
+      "Unknown": 0.28
+    },
+    "late_share_by_vehicle_type_pct": {
+      "Cold Storage Van": 20.27,
+      "Refrigerated Container": 20.13,
+      "Reefer Van": 19.91,
+      "Reefer Truck": 19.87,
+      "Insulated Truck": 19.83
+    },
+    "top5_routes_by_total_cost_inr": {
+      "RT-001": 44628348.96,
+      "RT-008": 44474864.87,
+      "RT-010": 44392781.67,
+      "RT-009": 44237095.25,
+      "RT-007": 44211090.5
+    },
+    "top5_warehouses_by_avg_dest_dwell_h": {
+      "WH-CTC-1": 15.75,
+      "WH-ASN-2": 15.44,
+      "WH-CTC-2": 15.42,
+      "WH-ASN-1": 15.42,
+      "WH-BBS-1": 15.42
+    },
+    "pareto_routes_for_80pc_late": 39,
+    "pareto_routes_total": 61
+  },
+  "business_impact": {
+    "routes_otd": {
+      "routes_analysed": 60,
+      "bottom_quartile_otd_threshold_pct": 73.69,
+      "median_route_otd_pct": 80.06,
+      "bottom_quartile_routes": 15,
+      "bottom_quartile_eligible_shipments": 69332,
+      "bottom_quartile_current_otd_pct": 66.07,
+      "late_deliveries_avoided_at_median": 9706
+    },
+    "routes_cost": {
+      "bottom_quartile_cost_threshold_inr": 4122.72,
+      "median_route_cost_per_shipment_inr": 4099.68,
+      "bottom_quartile_routes": 15,
+      "bottom_quartile_valid_cost_shipments": 68420,
+      "potential_saving_inr_at_median": 3113832.63
+    },
+    "warehouses_dwell": {
+      "bottom_quartile_dwell_threshold_h": 15.57,
+      "median_warehouse_dest_dwell_h": 15.51,
+      "bottom_quartile_warehouses": 7,
+      "bottom_quartile_shipments": 49282,
+      "excess_dwell_hours_at_median": 4295.8
+    },
+    "scenarios": {
+      "conservative": {
+        "gap_closed_pct": 50,
+        "late_deliveries_avoided": 4853,
+        "potential_cost_saving_inr": 1556916.31,
+        "excess_dwell_hours_recovered": 2147.9
+      },
+      "realistic": {
+        "gap_closed_pct": 100,
+        "late_deliveries_avoided": 9706,
+        "potential_cost_saving_inr": 3113832.63,
+        "excess_dwell_hours_recovered": 4295.8
+      },
+      "optimistic": {
+        "gap_closed_pct": 100,
+        "late_deliveries_avoided": 9706,
+        "potential_cost_saving_inr": 3425215.89,
+        "excess_dwell_hours_recovered": 4295.8
+      }
+    },
+    "assumptions": [
+      "Modelled estimates on SYNTHETIC data; not a forecast of real savings.",
+      "Improvement is modelled as bottom-quartile segments converging to the network median; no causal mechanism is assumed.",
+      "Cost saving uses the route cost-per-shipment gap only; dwell-hour savings are reported in hours because no verified per-hour handling cost exists in the data.",
+      "No behaviour change by customers, no capacity constraints and no implementation costs are included.",
+      "Optimistic scenario adds a further 10% efficiency gain on top of median convergence; it is not guaranteed."
+    ]
+  },
+  "notes": {
+    "otd_definition": "Eligible = status Delivered/Delayed with valid promised and actual timestamps.",
+    "yoy_note": "No true YoY: data covers 2025 only. H1 vs H2 2025 is the prior-period comparison.",
+    "data": "SYNTHETIC data, seed 42. Not real company data."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "project": "Logistics KPI Performance Review",
+  "data_type": "SYNTHETIC \u2014 generated, not real company data",
+  "seed": 42,
+  "date_range": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "hubs": 12,
+  "routes": 60,
+  "vehicles": 180,
+  "warehouses": 24,
+  "shipments_raw_rows": 304500,
+  "scan_events_raw_rows": 1200000,
+  "total_raw_records": 1504500,
+  "injected_defects": {
+    "duplicate_shipment_rows": 4500,
+    "orphan_scan_rows": 6000,
+    "negative_dwell_shipments_pct": 1.0,
+    "out_of_order_shipments_pct": 5.0,
+    "messy_hub_identifier_pct": 30.0,
+    "invalid_route_ref_pct": 0.5,
+    "invalid_vehicle_ref_pct": 0.5
+  }
+}

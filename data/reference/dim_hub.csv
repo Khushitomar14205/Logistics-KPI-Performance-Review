@@ -1,0 +1,13 @@
+hub_id,hub_name,state,region,is_cold_chain
+KOL,Kolkata,West Bengal,East India,True
+HWH,Howrah,West Bengal,East India,True
+SIL,Siliguri,West Bengal,East India,True
+DGP,Durgapur,West Bengal,East India,True
+ASN,Asansol,West Bengal,East India,True
+MLD,Malda,West Bengal,East India,True
+GAU,Guwahati,Assam,East India,True
+PAT,Patna,Bihar,East India,True
+RNC,Ranchi,Jharkhand,East India,True
+JSR,Jamshedpur,Jharkhand,East India,True
+BBS,Bhubaneswar,Odisha,East India,True
+CTC,Cuttack,Odisha,East India,True

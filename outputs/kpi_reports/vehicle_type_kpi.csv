@@ -1,0 +1,6 @@
+shipments,otd_eligible,otd_pct,late_deliveries,cost_per_shipment_inr,total_valid_cost_inr,valid_cost_shipments,avg_dwell_dest_h,avg_dwell_origin_h,avg_dwell_combined_h,vehicle_type
+60101,53835,76.24,12791,4107.2,241458053.45,58789,15.47,2.5,8.89,Cold Storage Van
+59843,53572,76.64,12516,4106.7,240328125.46,58521,15.47,2.5,8.89,Insulated Truck
+59905,53533,76.58,12539,4095.95,240198704.51,58643,15.53,2.5,8.92,Reefer Truck
+60071,53715,76.61,12565,4102.26,241114178.6,58776,15.52,2.5,8.92,Reefer Van
+60080,53675,76.33,12707,4101.3,240975771.67,58756,15.48,2.5,8.9,Refrigerated Container

@@ -1,0 +1,34 @@
+{
+  "overall": {
+    "shipments": 300000,
+    "otd_eligible": 268330,
+    "otd_pct": 76.48,
+    "late_deliveries": 63118,
+    "cost_per_shipment_inr": 4102.68,
+    "total_valid_cost_inr": 1204074833.69,
+    "valid_cost_shipments": 293485,
+    "avg_dwell_dest_h": 15.49,
+    "avg_dwell_origin_h": 2.5,
+    "avg_dwell_combined_h": 8.9
+  },
+  "scenarios": {
+    "conservative": {
+      "gap_closed_pct": 50,
+      "late_deliveries_avoided": 4853,
+      "potential_cost_saving_inr": 1556916.31,
+      "excess_dwell_hours_recovered": 2147.9
+    },
+    "realistic": {
+      "gap_closed_pct": 100,
+      "late_deliveries_avoided": 9706,
+      "potential_cost_saving_inr": 3113832.63,
+      "excess_dwell_hours_recovered": 4295.8
+    },
+    "optimistic": {
+      "gap_closed_pct": 100,
+      "late_deliveries_avoided": 9706,
+      "potential_cost_saving_inr": 3425215.89,
+      "excess_dwell_hours_recovered": 4295.8
+    }
+  }
+}

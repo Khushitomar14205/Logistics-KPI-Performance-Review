@@ -1,0 +1,14 @@
+table,column,dtype,total_records,missing_values,missing_pct,unique_values,duplicate_values,sample_values
+shipments_raw,shipment_id,str,304500,0,0.0,300000,4500,SHP-242692; SHP-071162; SHP-269408
+shipments_raw,shipment_date,str,304500,0,0.0,365,,2025-03-05; 2025-08-11; 2025-10-05
+shipments_raw,origin_hub,str,304500,0,0.0,72,,HWH; MLD; PAT
+shipments_raw,destination_hub,str,304500,0,0.0,72,,JSR; HWH; ASN
+shipments_raw,route_id,str,304500,0,0.0,61,304439,RT-020; RT-046; RT-044
+shipments_raw,vehicle_id,str,304500,1455,0.478,181,304319,VEH-014; VEH-152; VEH-051
+shipments_raw,vehicle_type,str,304500,0,0.0,5,,Cold Storage Van; Insulated Truck; Reefer Van
+shipments_raw,warehouse_id,str,304500,0,0.0,24,304476,WH-HWH-1; WH-MLD-1; WH-PAT-2
+shipments_raw,category,str,304500,873,0.287,5,,Dairy; Pharma; Chilled
+shipments_raw,promised_delivery_ts,str,304500,2407,0.79,26371,,2025-03-07T10:30:00+05:30; 2025-13-45 25:99:00; 2025-10-06T08:00:00Z
+shipments_raw,actual_delivery_ts,str,304500,3601,1.183,293017,,2025-03-07T01:52:54Z; 2025-10-05 23:25:00; 2025-08-28T17:57:52+05:30
+shipments_raw,shipment_cost_inr,float64,304500,2954,0.97,234574,,4344.46; 7721.28; 8396.19
+shipments_raw,status,str,304500,0,0.0,5,,Delayed; Delivered; Returned

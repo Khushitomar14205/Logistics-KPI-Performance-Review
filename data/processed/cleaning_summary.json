@@ -1,0 +1,14 @@
+{
+  "raw_shipments": 304500,
+  "clean_shipments": 300000,
+  "raw_scans": 1200000,
+  "clean_scans": 1194000,
+  "total_raw_records": 1504500,
+  "total_clean_records": 1494000,
+  "shipments_removed_duplicates": 4500,
+  "scans_removed_orphans": 6000,
+  "cleaning_log_rows": 19,
+  "changed_records_logged": 200528,
+  "shipments_with_valid_timestamps": 288252,
+  "valid_cost_shipments": 293485
+}

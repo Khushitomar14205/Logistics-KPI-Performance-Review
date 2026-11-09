@@ -1,0 +1,181 @@
+vehicle_id,vehicle_type,capacity_kg,home_hub
+VEH-001,Reefer Van,5723,HWH
+VEH-002,Insulated Truck,8286,SIL
+VEH-003,Refrigerated Container,8129,DGP
+VEH-004,Cold Storage Van,6076,ASN
+VEH-005,Reefer Truck,10376,MLD
+VEH-006,Reefer Van,7130,GAU
+VEH-007,Insulated Truck,1687,PAT
+VEH-008,Refrigerated Container,9367,RNC
+VEH-009,Cold Storage Van,7235,JSR
+VEH-010,Reefer Truck,7908,BBS
+VEH-011,Reefer Van,7132,CTC
+VEH-012,Insulated Truck,7000,KOL
+VEH-013,Refrigerated Container,1814,HWH
+VEH-014,Cold Storage Van,7063,SIL
+VEH-015,Reefer Truck,9703,DGP
+VEH-016,Reefer Van,4204,ASN
+VEH-017,Insulated Truck,7551,MLD
+VEH-018,Refrigerated Container,1145,GAU
+VEH-019,Cold Storage Van,4691,PAT
+VEH-020,Reefer Truck,5691,RNC
+VEH-021,Reefer Van,11806,JSR
+VEH-022,Insulated Truck,3203,BBS
+VEH-023,Refrigerated Container,3897,CTC
+VEH-024,Cold Storage Van,5375,KOL
+VEH-025,Reefer Truck,11917,HWH
+VEH-026,Reefer Van,10358,SIL
+VEH-027,Insulated Truck,1188,DGP
+VEH-028,Refrigerated Container,3420,ASN
+VEH-029,Cold Storage Van,10002,MLD
+VEH-030,Reefer Truck,1452,GAU
+VEH-031,Reefer Van,10383,PAT
+VEH-032,Insulated Truck,3951,RNC
+VEH-033,Refrigerated Container,11077,JSR
+VEH-034,Cold Storage Van,4088,BBS
+VEH-035,Reefer Truck,5664,CTC
+VEH-036,Reefer Van,8213,KOL
+VEH-037,Insulated Truck,2214,HWH
+VEH-038,Refrigerated Container,7038,SIL
+VEH-039,Cold Storage Van,6456,DGP
+VEH-040,Reefer Truck,9579,ASN
+VEH-041,Reefer Van,11956,MLD
+VEH-042,Insulated Truck,8240,GAU
+VEH-043,Refrigerated Container,5382,PAT
+VEH-044,Cold Storage Van,5351,RNC
+VEH-045,Reefer Truck,5481,JSR
+VEH-046,Reefer Van,9917,BBS
+VEH-047,Insulated Truck,4397,CTC
+VEH-048,Refrigerated Container,2670,KOL
+VEH-049,Cold Storage Van,4544,HWH
+VEH-050,Reefer Truck,1054,SIL
+VEH-051,Reefer Van,1988,DGP
+VEH-052,Insulated Truck,1808,ASN
+VEH-053,Refrigerated Container,9441,MLD
+VEH-054,Cold Storage Van,8890,GAU
+VEH-055,Reefer Truck,8603,PAT
+VEH-056,Reefer Van,5973,RNC
+VEH-057,Insulated Truck,8831,JSR
+VEH-058,Refrigerated Container,2606,BBS
+VEH-059,Cold Storage Van,10886,CTC
+VEH-060,Reefer Truck,6411,KOL
+VEH-061,Reefer Van,11306,HWH
+VEH-062,Insulated Truck,2505,SIL
+VEH-063,Refrigerated Container,6370,DGP
+VEH-064,Cold Storage Van,8598,ASN
+VEH-065,Reefer Truck,6351,MLD
+VEH-066,Reefer Van,5796,GAU
+VEH-067,Insulated Truck,2661,PAT
+VEH-068,Refrigerated Container,5067,RNC
+VEH-069,Cold Storage Van,3474,JSR
+VEH-070,Reefer Truck,4176,BBS
+VEH-071,Reefer Van,8457,CTC
+VEH-072,Insulated Truck,7859,KOL
+VEH-073,Refrigerated Container,7600,HWH
+VEH-074,Cold Storage Van,4852,SIL
+VEH-075,Reefer Truck,11548,DGP
+VEH-076,Reefer Van,1781,ASN
+VEH-077,Insulated Truck,4637,MLD
+VEH-078,Refrigerated Container,2121,GAU
+VEH-079,Cold Storage Van,4596,PAT
+VEH-080,Reefer Truck,11573,RNC
+VEH-081,Reefer Van,4902,JSR
+VEH-082,Insulated Truck,10976,BBS
+VEH-083,Refrigerated Container,6344,CTC
+VEH-084,Cold Storage Van,8636,KOL
+VEH-085,Reefer Truck,5923,HWH
+VEH-086,Reefer Van,3777,SIL
+VEH-087,Insulated Truck,9359,DGP
+VEH-088,Refrigerated Container,11654,ASN
+VEH-089,Cold Storage Van,3751,MLD
+VEH-090,Reefer Truck,9522,GAU
+VEH-091,Reefer Van,3724,PAT
+VEH-092,Insulated Truck,8829,RNC
+VEH-093,Refrigerated Container,9636,JSR
+VEH-094,Cold Storage Van,5832,BBS
+VEH-095,Reefer Truck,9053,CTC
+VEH-096,Reefer Van,3849,KOL
+VEH-097,Insulated Truck,1687,HWH
+VEH-098,Refrigerated Container,1879,SIL
+VEH-099,Cold Storage Van,5806,DGP
+VEH-100,Reefer Truck,10909,ASN
+VEH-101,Reefer Van,2228,MLD
+VEH-102,Insulated Truck,5904,GAU
+VEH-103,Refrigerated Container,8685,PAT
+VEH-104,Cold Storage Van,3066,RNC
+VEH-105,Reefer Truck,8882,JSR
+VEH-106,Reefer Van,4226,BBS
+VEH-107,Insulated Truck,9857,CTC
+VEH-108,Refrigerated Container,7287,KOL
+VEH-109,Cold Storage Van,6925,HWH
+VEH-110,Reefer Truck,2779,SIL
+VEH-111,Reefer Van,5987,DGP
+VEH-112,Insulated Truck,10394,ASN
+VEH-113,Refrigerated Container,1018,MLD
+VEH-114,Cold Storage Van,9295,GAU
+VEH-115,Reefer Truck,6318,PAT
+VEH-116,Reefer Van,8857,RNC
+VEH-117,Insulated Truck,8228,JSR
+VEH-118,Refrigerated Container,5639,BBS
+VEH-119,Cold Storage Van,4257,CTC
+VEH-120,Reefer Truck,7825,KOL
+VEH-121,Reefer Van,2370,HWH
+VEH-122,Insulated Truck,7341,SIL
+VEH-123,Refrigerated Container,1860,DGP
+VEH-124,Cold Storage Van,8078,ASN
+VEH-125,Reefer Truck,7841,MLD
+VEH-126,Reefer Van,1745,GAU
+VEH-127,Insulated Truck,9283,PAT
+VEH-128,Refrigerated Container,5457,RNC
+VEH-129,Cold Storage Van,9613,JSR
+VEH-130,Reefer Truck,1266,BBS
+VEH-131,Reefer Van,2809,CTC
+VEH-132,Insulated Truck,6332,KOL
+VEH-133,Refrigerated Container,2908,HWH
+VEH-134,Cold Storage Van,4494,SIL
+VEH-135,Reefer Truck,8198,DGP
+VEH-136,Reefer Van,2418,ASN
+VEH-137,Insulated Truck,8390,MLD
+VEH-138,Refrigerated Container,1958,GAU
+VEH-139,Cold Storage Van,2762,PAT
+VEH-140,Reefer Truck,7381,RNC
+VEH-141,Reefer Van,9687,JSR
+VEH-142,Insulated Truck,2710,BBS
+VEH-143,Refrigerated Container,4159,CTC
+VEH-144,Cold Storage Van,11161,KOL
+VEH-145,Reefer Truck,11884,HWH
+VEH-146,Reefer Van,7307,SIL
+VEH-147,Insulated Truck,5806,DGP
+VEH-148,Refrigerated Container,4684,ASN
+VEH-149,Cold Storage Van,7659,MLD
+VEH-150,Reefer Truck,7418,GAU
+VEH-151,Reefer Van,4101,PAT
+VEH-152,Insulated Truck,1055,RNC
+VEH-153,Refrigerated Container,2496,JSR
+VEH-154,Cold Storage Van,11535,BBS
+VEH-155,Reefer Truck,5483,CTC
+VEH-156,Reefer Van,6201,KOL
+VEH-157,Insulated Truck,6031,HWH
+VEH-158,Refrigerated Container,9566,SIL
+VEH-159,Cold Storage Van,1527,DGP
+VEH-160,Reefer Truck,1726,ASN
+VEH-161,Reefer Van,3889,MLD
+VEH-162,Insulated Truck,6250,GAU
+VEH-163,Refrigerated Container,8316,PAT
+VEH-164,Cold Storage Van,6295,RNC
+VEH-165,Reefer Truck,5741,JSR
+VEH-166,Reefer Van,11303,BBS
+VEH-167,Insulated Truck,2603,CTC
+VEH-168,Refrigerated Container,7203,KOL
+VEH-169,Cold Storage Van,6873,HWH
+VEH-170,Reefer Truck,6103,SIL
+VEH-171,Reefer Van,9845,DGP
+VEH-172,Insulated Truck,3790,ASN
+VEH-173,Refrigerated Container,11482,MLD
+VEH-174,Cold Storage Van,4513,GAU
+VEH-175,Reefer Truck,6904,PAT
+VEH-176,Reefer Van,6631,RNC
+VEH-177,Insulated Truck,10317,JSR
+VEH-178,Refrigerated Container,5715,BBS
+VEH-179,Cold Storage Van,3987,CTC
+VEH-180,Reefer Truck,1042,KOL
