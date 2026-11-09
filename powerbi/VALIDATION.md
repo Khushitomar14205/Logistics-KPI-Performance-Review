@@ -19,7 +19,7 @@
 - [x] .pbit opens as a ZIP — 9 parts
 - [x] ZIP integrity (testzip)
 - [x] [Content_Types].xml has UTF-8 BOM
-- [x] [Content_Types].xml lists every part — 9 overrides
+- [x] [Content_Types].xml lists every part — 8 overrides
 - [x] No DataModel part (template, not a .pbix)
 - [x] Version is UTF-16LE with BOM
 - [x] DataModelSchema is UTF-16LE with BOM
