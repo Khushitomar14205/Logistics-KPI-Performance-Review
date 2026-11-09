@@ -1,0 +1,20 @@
+Issue,Records Affected,Cleaning Action,Reason,Validation
+Invalid promised_delivery_ts (unparseable string),2323,Timestamp set to NaT; shipment excluded from OTD denominator,Value cannot be parsed as a date/time in any observed format,Re-parsed after cleaning: 0 unparseable values remain (all NaT)
+Invalid actual_delivery_ts (unparseable string),2219,Timestamp set to NaT; shipment excluded from OTD denominator,Value cannot be parsed as a date/time in any observed format,Re-parsed after cleaning: 0 unparseable values remain (all NaT)
+Hub identifier standardised (origin_hub),91486,Mapped raw variant to canonical hub id via hub_crosswalk.csv,Same hub recorded under multiple spellings/ids,"After mapping, all values are in Dim_Hub (12 hubs)"
+Hub identifier standardised (destination_hub),92027,Mapped raw variant to canonical hub id via hub_crosswalk.csv,Same hub recorded under multiple spellings/ids,"After mapping, all values are in Dim_Hub (12 hubs)"
+Duplicate shipment_id (extra copies),4500,"Removed extra copies; kept the most complete record (fewest nulls, first occurrence)",Same shipment recorded more than once in source,shipment_id unique after cleaning
+Negative shipment cost,2439,Flagged cost_valid=False; excluded from cost-per-shipment denominator,A shipment cost cannot be negative,No negative costs in valid-cost set
+Zero shipment cost,1156,Flagged cost_valid=False; excluded from cost-per-shipment denominator,"Zero cost indicates a missing/failed charge capture, not a free shipment",No zero costs in valid-cost set
+Missing shipment cost,2920,Flagged cost_valid=False; excluded from cost KPI,Cost not recorded,Valid-cost set contains no nulls
+Missing category,857,Kept as 'Unknown' dimension member for segment reporting,Value not recorded; imputation would invent a category/vehicle,No nulls remain in the column
+Missing vehicle_id,1429,Kept as 'Unknown' dimension member for segment reporting,Value not recorded; imputation would invent a category/vehicle,No nulls remain in the column
+Missing promised_ts_utc,5405,Kept as NaT; shipment excluded from OTD denominator,Timestamp not recorded,OTD denominator contains only valid timestamps
+Missing actual_ts_utc,6479,Kept as NaT; shipment excluded from OTD denominator,Timestamp not recorded,OTD denominator contains only valid timestamps
+Invalid route reference,1521,"Set to UNKNOWN route; kept in shipment table, excluded from route segments",route_id matches no Dim_Route row,0 invalid route refs remain
+Invalid vehicle reference,1543,"Set to UNKNOWN vehicle; kept in shipment table, excluded from vehicle segments",vehicle_id matches no Dim_Vehicle row,0 invalid vehicle refs remain
+Invalid scan timestamp,0,Timestamp set to NaT; event excluded from dwell/sequencing,Unparseable scan timestamp,0 unparseable scan timestamps remain
+Orphan scan events (no matching shipment),6000,Removed; cannot be joined to any shipment,shipment_id has no shipment record (dedupe removed it or it never existed),0 orphan scans remain; referential integrity holds
+Out-of-order scan events,see profiling (re-sequenced),Sorted by UTC timestamp within each shipment; scan_sequence assigned,Source file order did not match chronological order,"Within each shipment, scan_ts_utc is non-decreasing"
+Negative dwell (dwell_origin_h),18,Flagged dwell_valid=False; excluded from dwell KPI,Departure cannot precede arrival at the same hub,Dwell KPI contains no negative durations
+Negative dwell (dwell_dest_h),2885,Flagged dwell_valid=False; excluded from dwell KPI,Departure cannot precede arrival at the same hub,Dwell KPI contains no negative durations

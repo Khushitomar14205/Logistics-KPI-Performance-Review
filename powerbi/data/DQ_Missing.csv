@@ -1,0 +1,14 @@
+table,column,dtype,total_records,missing_values,missing_pct,unique_values
+shipments_raw,shipment_id,str,304500,0,0.0,300000
+shipments_raw,shipment_date,str,304500,0,0.0,365
+shipments_raw,origin_hub,str,304500,0,0.0,72
+shipments_raw,destination_hub,str,304500,0,0.0,72
+shipments_raw,route_id,str,304500,0,0.0,61
+shipments_raw,vehicle_id,str,304500,1455,0.478,181
+shipments_raw,vehicle_type,str,304500,0,0.0,5
+shipments_raw,warehouse_id,str,304500,0,0.0,24
+shipments_raw,category,str,304500,873,0.287,5
+shipments_raw,promised_delivery_ts,str,304500,2407,0.79,26371
+shipments_raw,actual_delivery_ts,str,304500,3601,1.183,293017
+shipments_raw,shipment_cost_inr,float64,304500,2954,0.97,234574
+shipments_raw,status,str,304500,0,0.0,5

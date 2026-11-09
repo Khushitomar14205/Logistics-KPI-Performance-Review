@@ -1,0 +1,249 @@
+{
+  "tables": {
+    "Fact_Shipment": {
+      "file": "Fact_Shipment.csv",
+      "rows": 300000,
+      "columns": [
+        "shipment_id",
+        "shipment_date",
+        "month",
+        "origin_hub",
+        "destination_hub",
+        "route_id",
+        "vehicle_id",
+        "vehicle_type",
+        "warehouse_id",
+        "category",
+        "status",
+        "promised_ts_utc",
+        "actual_ts_utc",
+        "shipment_cost_inr",
+        "cost_valid",
+        "on_time",
+        "late_hours",
+        "dwell_origin_h",
+        "dwell_dest_h",
+        "dwell_avg_h",
+        "dwell_origin_valid",
+        "dwell_dest_valid"
+      ]
+    },
+    "Dim_Hub": {
+      "file": "Dim_Hub.csv",
+      "rows": 12,
+      "columns": [
+        "hub_id",
+        "hub_name",
+        "state",
+        "region",
+        "is_cold_chain"
+      ]
+    },
+    "Dim_Route": {
+      "file": "Dim_Route.csv",
+      "rows": 61,
+      "columns": [
+        "route_id",
+        "origin_hub",
+        "destination_hub",
+        "distance_km",
+        "planned_transit_hours"
+      ]
+    },
+    "Dim_Vehicle": {
+      "file": "Dim_Vehicle.csv",
+      "rows": 181,
+      "columns": [
+        "vehicle_id",
+        "vehicle_type",
+        "capacity_kg",
+        "home_hub"
+      ]
+    },
+    "Dim_Warehouse": {
+      "file": "Dim_Warehouse.csv",
+      "rows": 24,
+      "columns": [
+        "warehouse_id",
+        "hub_id",
+        "warehouse_name",
+        "capacity_pallets"
+      ]
+    },
+    "Dim_Category": {
+      "file": "Dim_Category.csv",
+      "rows": 6,
+      "columns": [
+        "category",
+        "base_cost_inr"
+      ]
+    },
+    "Dim_Date": {
+      "file": "Dim_Date.csv",
+      "rows": 365,
+      "columns": [
+        "date",
+        "date_key",
+        "month",
+        "month_name",
+        "quarter",
+        "year",
+        "day_of_week"
+      ]
+    },
+    "Monthly_KPI": {
+      "file": "Monthly_KPI.csv",
+      "rows": 12,
+      "columns": [
+        "shipments",
+        "otd_eligible",
+        "otd_pct",
+        "late_deliveries",
+        "cost_per_shipment_inr",
+        "total_valid_cost_inr",
+        "valid_cost_shipments",
+        "avg_dwell_dest_h",
+        "avg_dwell_origin_h",
+        "avg_dwell_combined_h",
+        "month",
+        "otd_mom_pp",
+        "cost_mom_pct",
+        "dwell_mom_pct"
+      ]
+    },
+    "Half_Year_KPI": {
+      "file": "Half_Year_KPI.csv",
+      "rows": 2,
+      "columns": [
+        "shipments",
+        "otd_eligible",
+        "otd_pct",
+        "late_deliveries",
+        "cost_per_shipment_inr",
+        "total_valid_cost_inr",
+        "valid_cost_shipments",
+        "avg_dwell_dest_h",
+        "avg_dwell_origin_h",
+        "avg_dwell_combined_h",
+        "half"
+      ]
+    },
+    "Hub_Destination_KPI": {
+      "file": "Hub_Destination_KPI.csv",
+      "rows": 12,
+      "columns": [
+        "shipments",
+        "otd_eligible",
+        "otd_pct",
+        "late_deliveries",
+        "cost_per_shipment_inr",
+        "total_valid_cost_inr",
+        "valid_cost_shipments",
+        "avg_dwell_dest_h",
+        "avg_dwell_origin_h",
+        "avg_dwell_combined_h",
+        "destination_hub"
+      ]
+    },
+    "Route_KPI": {
+      "file": "Route_KPI.csv",
+      "rows": 61,
+      "columns": [
+        "shipments",
+        "otd_eligible",
+        "otd_pct",
+        "late_deliveries",
+        "cost_per_shipment_inr",
+        "total_valid_cost_inr",
+        "valid_cost_shipments",
+        "avg_dwell_dest_h",
+        "avg_dwell_origin_h",
+        "avg_dwell_combined_h",
+        "route_id"
+      ]
+    },
+    "Warehouse_KPI": {
+      "file": "Warehouse_KPI.csv",
+      "rows": 24,
+      "columns": [
+        "shipments",
+        "otd_eligible",
+        "otd_pct",
+        "late_deliveries",
+        "cost_per_shipment_inr",
+        "total_valid_cost_inr",
+        "valid_cost_shipments",
+        "avg_dwell_dest_h",
+        "avg_dwell_origin_h",
+        "avg_dwell_combined_h",
+        "warehouse_id"
+      ]
+    },
+    "Category_KPI": {
+      "file": "Category_KPI.csv",
+      "rows": 6,
+      "columns": [
+        "shipments",
+        "otd_eligible",
+        "otd_pct",
+        "late_deliveries",
+        "cost_per_shipment_inr",
+        "total_valid_cost_inr",
+        "valid_cost_shipments",
+        "avg_dwell_dest_h",
+        "avg_dwell_origin_h",
+        "avg_dwell_combined_h",
+        "category"
+      ]
+    },
+    "Cleaning_Log": {
+      "file": "Cleaning_Log.csv",
+      "rows": 19,
+      "columns": [
+        "Issue",
+        "Records Affected",
+        "Cleaning Action",
+        "Reason",
+        "Validation"
+      ]
+    },
+    "DQ_Missing": {
+      "file": "DQ_Missing.csv",
+      "rows": 13,
+      "columns": [
+        "table",
+        "column",
+        "dtype",
+        "total_records",
+        "missing_values",
+        "missing_pct",
+        "unique_values"
+      ]
+    },
+    "DQ_Summary": {
+      "file": "DQ_Summary.csv",
+      "rows": 30,
+      "columns": [
+        "check",
+        "value",
+        "status"
+      ]
+    }
+  },
+  "notes": [
+    "Dim_Route: appended UNKNOWN member (1,548 shipments carry route_id = UNKNOWN).",
+    "Dim_Vehicle: appended UNKNOWN member (1,543 shipments carry vehicle_id = UNKNOWN).",
+    "Dim_Category: appended Unknown member (857 shipments carry category = Unknown).",
+    "KPI_* tables are disconnected reference tables for the Data Quality page cross-check; no relationships are created on them."
+  ],
+  "headline_check_from_exported_csv": {
+    "otd_pct": 76.48,
+    "cost_per_shipment_inr": 4102.68,
+    "avg_dest_dwell_h": 15.49,
+    "expected": {
+      "otd_pct": 76.48,
+      "cost_per_shipment_inr": 4102.68,
+      "avg_dest_dwell_h": 15.49
+    }
+  }
+}

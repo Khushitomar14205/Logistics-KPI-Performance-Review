@@ -220,25 +220,37 @@ Full detail: `outputs/cleaning_logs/cleaning_log.csv` (19 issue types) and
 `outputs/kpi_reports/data_quality_report.md`. Note that profiling counts (e.g. 2,474 negative costs) are on the
 raw files including duplicates, while cleaning-log counts (2,439) are post-dedupe — both are correct at their stage.
 
-## Power BI — what is delivered (and the `.pbix` fallback)
+## Power BI — what is delivered (`.pbit` + `.pbip`, `.pbix` via Desktop)
 
 **No `.pbix` file is included, because a Power BI file cannot be generated programmatically** — it is a
-proprietary binary that only Power BI Desktop can create. Instead, the Power BI deliverable is:
+proprietary binary that only Power BI Desktop can create. Instead, the project ships a ready-made dashboard
+in the two forms Desktop can open, both built from the same model and structurally validated
+(`powerbi/VALIDATION.md`, 519/519 checks pass):
 
-- **Cleaned import-ready datasets** — `data/processed/trusted_analysis_table_sample.csv` (10,000 rows) for a
-  quick build, or the full `data/processed/trusted_analysis_table.parquet` (300,000 rows) for the exact headline
-  numbers, plus the `data/reference/dim_*.csv` dimensions and the pre-aggregated KPI CSVs in
-  `outputs/kpi_reports/` for cross-checking.
+- **Template — `powerbi/Logistics_KPI_Performance_Review.pbit`**: open in Power BI Desktop, set the
+  `DataFolder` parameter to the `powerbi/data/` folder when prompted, Refresh, then **File → Save As → `.pbix`**.
+  That saved file is the deliverable `.pbix`.
+- **Project folder — `powerbi/Logistics_KPI_Performance_Review.pbip/`**: open the `.pbip` in Desktop; same
+  `DataFolder` prompt, Refresh, Save As. Use this if Desktop reports a mashup error on the `.pbit` — it reads
+  the M queries straight from `model.bim`.
+- **Data for the dashboard** — `powerbi/data/` (16 CSVs, 69 MB): the full 300,000-row `Fact_Shipment` plus
+  dimensions and the pre-aggregated KPI tables, so the cards show the exact headline numbers (OTD 76.48%,
+  cost ₹4,102.68, dwell 15.49 h).
 - **Complete DAX measures** — `powerbi/DAX_Measures.md`: OTD %, Cost per Shipment, Avg Destination Dwell,
   Total Shipments, Late Deliveries, MoM OTD change, half-year comparison, and the scorecard RAG status text
-  measures, with the star-schema relationship list they assume.
-- **Build instructions** — `powerbi/Power_BI_Dashboard_Guide.md`: step-by-step construction of the 4 pages
-  (1 Executive Overview, 2 Hub and Warehouse Performance, 3 Route and Shipment Analysis, 4 Data Quality
-  Monitoring), with slicers, filters and the measure for every visual.
+  measures, with the star-schema relationship list they assume. All 26 are already in the `.pbit`/`.pbip`.
+- **Build instructions** — `powerbi/Power_BI_Dashboard_Guide.md`: open instructions for the `.pbit`/`.pbip`,
+  plus the step-by-step manual build of the 4 pages (1 Executive Overview, 2 Hub and Warehouse Performance,
+  3 Route and Shipment Analysis, 4 Data Quality Monitoring), with slicers, filters and the measure for every visual.
+- **Format notes** — `powerbi/FORMAT_NOTES.md`: what was relied on to generate the files (PBIP layout, TMSL
+  `model.bim`, PBIR-Legacy `report.json`, OPC `.pbit` layout, MS-QDEFF DataMashup), and the honest limit that
+  rendering and refresh can only be verified inside Power BI Desktop.
 
-Following the guide with the provided files reproduces the dashboard. Note the sample warning: the 10,000-row
-sample is the first 10,000 rows, not a random sample, so its cards read approximately (OTD 76.62%,
-₹4,123.31, 15.38 h) rather than the headline values — import the full parquet for exact numbers.
+Two 30-second manual steps after opening: apply Top N filters in the Filters pane (route charts are sorted by
+the measure instead — worst/best 10 routes, Pareto top 15), and mark `Dim_Date` as a date table. The manual-build
+route in the guide is still there as a fallback. Note the sample warning: the 10,000-row sample is the first
+10,000 rows, not a random sample, so its cards read approximately (OTD 76.62%, ₹4,123.31, 15.38 h) rather
+than the headline values — import the full parquet (or use the `.pbit`/`.pbip`, which already does) for exact numbers.
 
 ## Limitations
 

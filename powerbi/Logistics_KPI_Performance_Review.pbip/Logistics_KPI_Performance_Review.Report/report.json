@@ -1,0 +1,540 @@
+{
+  "config": "{\"version\":\"5.70\",\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1}}",
+  "layoutOptimization": 0,
+  "sections": [
+    {
+      "name": "ExecutiveOverview",
+      "displayName": "Executive Overview",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 0,
+      "config": "{\"name\":\"ExecutiveOverview\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":1280,\"height\":720}}],\"singleVisualGroup\":null}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 1,
+          "width": 1240,
+          "height": 34,
+          "config": "{\"name\":\"0c568e2f41d3d929f45d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":8,\"z\":1,\"width\":1240,\"height\":34}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Logistics KPI Performance Review \\u2014 Executive Overview\",\"textStyle\":{\"fontSize\":20,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 44,
+          "z": 1,
+          "width": 1240,
+          "height": 20,
+          "config": "{\"name\":\"a6c8a12a488e0567f4ea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":44,\"z\":1,\"width\":1240,\"height\":20}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Synthetic data (seed 42) \\u2014 fictional Kolkata cold-chain distributor, 2025. Not real company data. Headline KPIs are network-level; use the slicers to explore.\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"5532a50657803bda3a1d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Date.month_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month_name\"},\"Name\":\"Dim_Date.month_name\",\"NativeReferenceName\":\"month_name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"671113252155c4ee57b5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Category.category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Category\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"category\"},\"Name\":\"Dim_Category.category\",\"NativeReferenceName\":\"category\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"13d1f5a1422a0139569b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Hub.hub_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Hub\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"hub_name\"},\"Name\":\"Dim_Hub.hub_name\",\"NativeReferenceName\":\"hub_name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 122,
+          "z": 1,
+          "width": 300,
+          "height": 108,
+          "config": "{\"name\":\"6f1063c1b18c4097a500\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":122,\"z\":1,\"width\":300,\"height\":108}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Shipment.Total Shipments\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Total Shipments\"},\"Name\":\"Fact_Shipment.Total Shipments\",\"NativeReferenceName\":\"Total Shipments\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":{\"show\":false},\"labels\":{\"show\":true}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 122,
+          "z": 1,
+          "width": 300,
+          "height": 108,
+          "config": "{\"name\":\"43eeb73be3217951ecb0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":122,\"z\":1,\"width\":300,\"height\":108}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":{\"show\":false},\"labels\":{\"show\":true}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 122,
+          "z": 1,
+          "width": 300,
+          "height": 108,
+          "config": "{\"name\":\"10e6e752ad726b431fde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":122,\"z\":1,\"width\":300,\"height\":108}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Shipment.Cost per Shipment (INR)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Cost per Shipment (INR)\"},\"Name\":\"Fact_Shipment.Cost per Shipment (INR)\",\"NativeReferenceName\":\"Cost per Shipment (INR)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":{\"show\":false},\"labels\":{\"show\":true}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 980,
+          "y": 122,
+          "z": 1,
+          "width": 280,
+          "height": 108,
+          "config": "{\"name\":\"1cbb2849da490fdc8428\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980,\"y\":122,\"z\":1,\"width\":280,\"height\":108}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":{\"show\":false},\"labels\":{\"show\":true}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 232,
+          "z": 1,
+          "width": 300,
+          "height": 34,
+          "config": "{\"name\":\"cc4a4aaf3821f728fa71\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":232,\"z\":1,\"width\":300,\"height\":34}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Fact_Shipment.Network Scorecard Status\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Network Scorecard Status\"},\"Name\":\"Fact_Shipment.Network Scorecard Status\",\"NativeReferenceName\":\"Network Scorecard Status\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 232,
+          "z": 1,
+          "width": 300,
+          "height": 34,
+          "config": "{\"name\":\"df519896c3ca76dc7dcf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":232,\"z\":1,\"width\":300,\"height\":34}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Fact_Shipment.OTD RAG Status\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"OTD RAG Status\"},\"Name\":\"Fact_Shipment.OTD RAG Status\",\"NativeReferenceName\":\"OTD RAG Status\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 232,
+          "z": 1,
+          "width": 300,
+          "height": 34,
+          "config": "{\"name\":\"95f0f1b83c36e764887c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":232,\"z\":1,\"width\":300,\"height\":34}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Fact_Shipment.Cost RAG Status\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Cost RAG Status\"},\"Name\":\"Fact_Shipment.Cost RAG Status\",\"NativeReferenceName\":\"Cost RAG Status\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 980,
+          "y": 232,
+          "z": 1,
+          "width": 280,
+          "height": 34,
+          "config": "{\"name\":\"c951201da3b614c1a142\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980,\"y\":232,\"z\":1,\"width\":280,\"height\":34}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Fact_Shipment.Dwell RAG Status\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Dwell RAG Status\"},\"Name\":\"Fact_Shipment.Dwell RAG Status\",\"NativeReferenceName\":\"Dwell RAG Status\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 278,
+          "z": 1,
+          "width": 620,
+          "height": 200,
+          "config": "{\"name\":\"e73c49e94c3943c58bdd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":278,\"z\":1,\"width\":620,\"height\":200}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Date.month_name\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Date\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month_name\"},\"Name\":\"Dim_Date.month_name\",\"NativeReferenceName\":\"month_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 278,
+          "z": 1,
+          "width": 600,
+          "height": 200,
+          "config": "{\"name\":\"37164b2fcbcfae4803c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":278,\"z\":1,\"width\":600,\"height\":200}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Date.month_name\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.Cost per Shipment (INR)\"}],\"Y2\":[{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Date\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month_name\"},\"Name\":\"Dim_Date.month_name\",\"NativeReferenceName\":\"month_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Cost per Shipment (INR)\"},\"Name\":\"Fact_Shipment.Cost per Shipment (INR)\",\"NativeReferenceName\":\"Cost per Shipment (INR)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 492,
+          "z": 1,
+          "width": 620,
+          "height": 92,
+          "config": "{\"name\":\"c6199c718d4521c1599a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":492,\"z\":1,\"width\":620,\"height\":92}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Half-year comparison (prior-period, NOT year-over-year)\",\"textStyle\":{\"fontSize\":13,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"H1 2025 OTD 76.49%  \\u00b7  H2 2025 OTD 76.47%  \\u00b7  Change \\u22120.02 pp. The data covers 2025 only, so there is no true year-over-year comparison.\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F1F1F\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 492,
+          "z": 1,
+          "width": 600,
+          "height": 92,
+          "config": "{\"name\":\"bef38a2a93f66276f4e1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":492,\"z\":1,\"width\":600,\"height\":92}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Business impact \\u2014 modelled estimate on synthetic data (not a forecast)\",\"textStyle\":{\"fontSize\":13,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"Realistic case, bottom-quartile segments improving to the median: 9,706 late deliveries avoided \\u00b7 \\u20b931,13,833 potential saving \\u00b7 4,295.8 excess dwell hours recovered. Conservative: 4,853 / \\u20b915,56,916 / 2,147.9 h. Optimistic: 9,706 / \\u20b934,25,216 / 4,295.8 h.\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F1F1F\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 598,
+          "z": 1,
+          "width": 1240,
+          "height": 104,
+          "config": "{\"name\":\"9da36dd3d2a2701ff7c8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":598,\"z\":1,\"width\":1240,\"height\":104}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"How to read this page\",\"textStyle\":{\"fontSize\":13,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"OTD % 76.48% (Amber: Green \\u226585%, Amber 75\\u201385%, Red <75%)  \\u00b7  Cost per shipment \\u20b94,102.68 (Amber: Green \\u2264\\u20b94,000, Amber \\u20b94,000\\u2013\\u20b94,500, Red >\\u20b94,500)  \\u00b7  Avg destination dwell 15.49 h (Amber: Green \\u226412 h, Amber 12\\u201318 h, Red >18 h). Thresholds are analyst-defined reporting conventions, not measured targets. Monthly OTD is flat (75.72%\\u201377.04%) \\u2014 the problem is structural and geographic, not seasonal.\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F1F1F\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "name": "HubWarehouse",
+      "displayName": "Hub & Warehouse Performance",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 1,
+      "config": "{\"name\":\"HubWarehouse\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":1280,\"height\":720}}],\"singleVisualGroup\":null}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 1,
+          "width": 1240,
+          "height": 34,
+          "config": "{\"name\":\"9f65789f74cfa6149356\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":8,\"z\":1,\"width\":1240,\"height\":34}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Hub & Warehouse Performance\",\"textStyle\":{\"fontSize\":20,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 44,
+          "z": 1,
+          "width": 1240,
+          "height": 20,
+          "config": "{\"name\":\"5a4f720866b7489b92bd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":44,\"z\":1,\"width\":1240,\"height\":20}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Synthetic data (seed 42) \\u2014 fictional Kolkata cold-chain distributor, 2025. Not real company data. Headline KPIs are network-level; use the slicers to explore.\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"283782621c008fea57ea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Hub.state\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Hub\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"state\"},\"Name\":\"Dim_Hub.state\",\"NativeReferenceName\":\"state\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"f5983a46e47f341aee74\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Category.category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Category\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"category\"},\"Name\":\"Dim_Category.category\",\"NativeReferenceName\":\"category\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"3c8c9b934ee63f324733\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Date.quarter\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"quarter\"},\"Name\":\"Dim_Date.quarter\",\"NativeReferenceName\":\"quarter\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 122,
+          "z": 1,
+          "width": 620,
+          "height": 218,
+          "config": "{\"name\":\"1fdf2f703e23986e8df8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":122,\"z\":1,\"width\":620,\"height\":218}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Hub.hub_name\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Hub\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"hub_name\"},\"Name\":\"Dim_Hub.hub_name\",\"NativeReferenceName\":\"hub_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 122,
+          "z": 1,
+          "width": 600,
+          "height": 218,
+          "config": "{\"name\":\"de110e8a30001097c5f8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":122,\"z\":1,\"width\":600,\"height\":218}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Hub.hub_name\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD % (Origin Hub)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Hub\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"hub_name\"},\"Name\":\"Dim_Hub.hub_name\",\"NativeReferenceName\":\"hub_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD % (Origin Hub)\"},\"Name\":\"Fact_Shipment.OTD % (Origin Hub)\",\"NativeReferenceName\":\"OTD % (Origin Hub)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD % (Origin Hub)\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 352,
+          "z": 1,
+          "width": 620,
+          "height": 178,
+          "config": "{\"name\":\"65a2fbc5a7b6291d8342\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":352,\"z\":1,\"width\":620,\"height\":178}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Hub.hub_name\"},{\"queryRef\":\"Dim_Hub.state\"},{\"queryRef\":\"Fact_Shipment.Total Shipments\"},{\"queryRef\":\"Fact_Shipment.OTD Eligible Shipments\"},{\"queryRef\":\"Fact_Shipment.Late Deliveries\"},{\"queryRef\":\"Fact_Shipment.OTD %\"},{\"queryRef\":\"Fact_Shipment.OTD RAG Status\"},{\"queryRef\":\"Fact_Shipment.Cost per Shipment (INR)\"},{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Hub\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"hub_name\"},\"Name\":\"Dim_Hub.hub_name\",\"NativeReferenceName\":\"hub_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"state\"},\"Name\":\"Dim_Hub.state\",\"NativeReferenceName\":\"state\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Shipments\"},\"Name\":\"Fact_Shipment.Total Shipments\",\"NativeReferenceName\":\"Total Shipments\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD Eligible Shipments\"},\"Name\":\"Fact_Shipment.OTD Eligible Shipments\",\"NativeReferenceName\":\"OTD Eligible Shipments\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Late Deliveries\"},\"Name\":\"Fact_Shipment.Late Deliveries\",\"NativeReferenceName\":\"Late Deliveries\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD RAG Status\"},\"Name\":\"Fact_Shipment.OTD RAG Status\",\"NativeReferenceName\":\"OTD RAG Status\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Cost per Shipment (INR)\"},\"Name\":\"Fact_Shipment.Cost per Shipment (INR)\",\"NativeReferenceName\":\"Cost per Shipment (INR)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 352,
+          "z": 1,
+          "width": 600,
+          "height": 178,
+          "config": "{\"name\":\"1257d70803224761c96c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":352,\"z\":1,\"width\":600,\"height\":178}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Warehouse.warehouse_id\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Warehouse\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"warehouse_id\"},\"Name\":\"Dim_Warehouse.warehouse_id\",\"NativeReferenceName\":\"warehouse_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Destination Dwell (h)\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 542,
+          "z": 1,
+          "width": 620,
+          "height": 160,
+          "config": "{\"name\":\"016805f6e6d5902915c7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":542,\"z\":1,\"width\":620,\"height\":160}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Warehouse.warehouse_id\"},{\"queryRef\":\"Dim_Warehouse.warehouse_name\"},{\"queryRef\":\"Dim_Hub.hub_name\"},{\"queryRef\":\"Fact_Shipment.Total Shipments\"},{\"queryRef\":\"Fact_Shipment.OTD %\"},{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"},{\"queryRef\":\"Fact_Shipment.Cost per Shipment (INR)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Warehouse\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Dim_Hub\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"warehouse_id\"},\"Name\":\"Dim_Warehouse.warehouse_id\",\"NativeReferenceName\":\"warehouse_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"warehouse_name\"},\"Name\":\"Dim_Warehouse.warehouse_name\",\"NativeReferenceName\":\"warehouse_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"hub_name\"},\"Name\":\"Dim_Hub.hub_name\",\"NativeReferenceName\":\"hub_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total Shipments\"},\"Name\":\"Fact_Shipment.Total Shipments\",\"NativeReferenceName\":\"Total Shipments\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cost per Shipment (INR)\"},\"Name\":\"Fact_Shipment.Cost per Shipment (INR)\",\"NativeReferenceName\":\"Cost per Shipment (INR)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Avg Destination Dwell (h)\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 542,
+          "z": 1,
+          "width": 600,
+          "height": 160,
+          "config": "{\"name\":\"4be6d974006c62c7ff10\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":542,\"z\":1,\"width\":600,\"height\":160}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"X\":[{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}],\"Details\":[{\"queryRef\":\"Dim_Warehouse.warehouse_id\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Fact_Shipment\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Dim_Warehouse\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"warehouse_id\"},\"Name\":\"Dim_Warehouse.warehouse_id\",\"NativeReferenceName\":\"warehouse_id\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "name": "RouteShipment",
+      "displayName": "Route & Shipment Analysis",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 2,
+      "config": "{\"name\":\"RouteShipment\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":1280,\"height\":720}}],\"singleVisualGroup\":null}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 1,
+          "width": 1240,
+          "height": 34,
+          "config": "{\"name\":\"66f478991c54a24eebca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":8,\"z\":1,\"width\":1240,\"height\":34}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Route & Shipment Analysis\",\"textStyle\":{\"fontSize\":20,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 44,
+          "z": 1,
+          "width": 1240,
+          "height": 20,
+          "config": "{\"name\":\"fc3e4a23f98762b73ed0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":44,\"z\":1,\"width\":1240,\"height\":20}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Synthetic data (seed 42) \\u2014 fictional Kolkata cold-chain distributor, 2025. Not real company data. Headline KPIs are network-level; use the slicers to explore.\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"aebb0afe5fe727b46190\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Hub.hub_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Hub\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"hub_name\"},\"Name\":\"Dim_Hub.hub_name\",\"NativeReferenceName\":\"hub_name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"c42c2f17b66d8d3d7c25\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Category.category\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Category\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"category\"},\"Name\":\"Dim_Category.category\",\"NativeReferenceName\":\"category\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 42,
+          "config": "{\"name\":\"9682798ffae750ec2608\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":68,\"z\":1,\"width\":300,\"height\":42}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Date.month_name\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Date\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month_name\"},\"Name\":\"Dim_Date.month_name\",\"NativeReferenceName\":\"month_name\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 122,
+          "z": 1,
+          "width": 400,
+          "height": 200,
+          "config": "{\"name\":\"22f41b5e81a7850c4446\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":122,\"z\":1,\"width\":400,\"height\":200}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Route.route_id\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Route\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"route_id\"},\"Name\":\"Dim_Route.route_id\",\"NativeReferenceName\":\"route_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 440,
+          "y": 122,
+          "z": 1,
+          "width": 400,
+          "height": 200,
+          "config": "{\"name\":\"03709269f90dee7b390f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":440,\"y\":122,\"z\":1,\"width\":400,\"height\":200}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Route.route_id\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Route\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"route_id\"},\"Name\":\"Dim_Route.route_id\",\"NativeReferenceName\":\"route_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 860,
+          "y": 122,
+          "z": 1,
+          "width": 400,
+          "height": 200,
+          "config": "{\"name\":\"a6a7d516c2dcffc9605c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":860,\"y\":122,\"z\":1,\"width\":400,\"height\":200}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Category.category\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Category\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"category\"},\"Name\":\"Dim_Category.category\",\"NativeReferenceName\":\"category\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 336,
+          "z": 1,
+          "width": 400,
+          "height": 178,
+          "config": "{\"name\":\"587f99946f430237656a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":336,\"z\":1,\"width\":400,\"height\":178}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Category.category\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.Cost per Shipment (INR)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Category\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"category\"},\"Name\":\"Dim_Category.category\",\"NativeReferenceName\":\"category\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Cost per Shipment (INR)\"},\"Name\":\"Fact_Shipment.Cost per Shipment (INR)\",\"NativeReferenceName\":\"Cost per Shipment (INR)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Cost per Shipment (INR)\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 440,
+          "y": 336,
+          "z": 1,
+          "width": 400,
+          "height": 178,
+          "config": "{\"name\":\"1f04ce4b656b30b67da2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":440,\"y\":336,\"z\":1,\"width\":400,\"height\":178}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Category.category\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.Late Deliveries\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Category\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"category\"},\"Name\":\"Dim_Category.category\",\"NativeReferenceName\":\"category\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Late Deliveries\"},\"Name\":\"Fact_Shipment.Late Deliveries\",\"NativeReferenceName\":\"Late Deliveries\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 860,
+          "y": 336,
+          "z": 1,
+          "width": 400,
+          "height": 178,
+          "config": "{\"name\":\"22f849fbe083ea94bb67\",\"layouts\":[{\"id\":0,\"position\":{\"x\":860,\"y\":336,\"z\":1,\"width\":400,\"height\":178}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Vehicle.vehicle_type\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.OTD %\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Vehicle\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"vehicle_type\"},\"Name\":\"Dim_Vehicle.vehicle_type\",\"NativeReferenceName\":\"vehicle_type\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 528,
+          "z": 1,
+          "width": 620,
+          "height": 176,
+          "config": "{\"name\":\"d9ff34943b2aa90582de\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":528,\"z\":1,\"width\":620,\"height\":176}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Dim_Route.route_id\"},{\"queryRef\":\"Dim_Route.origin_hub\"},{\"queryRef\":\"Dim_Route.destination_hub\"},{\"queryRef\":\"Dim_Route.distance_km\"},{\"queryRef\":\"Fact_Shipment.Total Shipments\"},{\"queryRef\":\"Fact_Shipment.OTD %\"},{\"queryRef\":\"Fact_Shipment.Late Deliveries\"},{\"queryRef\":\"Fact_Shipment.Cost per Shipment (INR)\"},{\"queryRef\":\"Fact_Shipment.Avg Destination Dwell (h)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Route\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"route_id\"},\"Name\":\"Dim_Route.route_id\",\"NativeReferenceName\":\"route_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"origin_hub\"},\"Name\":\"Dim_Route.origin_hub\",\"NativeReferenceName\":\"origin_hub\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"destination_hub\"},\"Name\":\"Dim_Route.destination_hub\",\"NativeReferenceName\":\"destination_hub\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"distance_km\"},\"Name\":\"Dim_Route.distance_km\",\"NativeReferenceName\":\"distance_km\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Total Shipments\"},\"Name\":\"Fact_Shipment.Total Shipments\",\"NativeReferenceName\":\"Total Shipments\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"},\"Name\":\"Fact_Shipment.OTD %\",\"NativeReferenceName\":\"OTD %\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Late Deliveries\"},\"Name\":\"Fact_Shipment.Late Deliveries\",\"NativeReferenceName\":\"Late Deliveries\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Cost per Shipment (INR)\"},\"Name\":\"Fact_Shipment.Cost per Shipment (INR)\",\"NativeReferenceName\":\"Cost per Shipment (INR)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Avg Destination Dwell (h)\"},\"Name\":\"Fact_Shipment.Avg Destination Dwell (h)\",\"NativeReferenceName\":\"Avg Destination Dwell (h)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"OTD %\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 528,
+          "z": 1,
+          "width": 600,
+          "height": 176,
+          "config": "{\"name\":\"12ff634da055ed8768cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":528,\"z\":1,\"width\":600,\"height\":176}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dim_Route.route_id\"}],\"Y\":[{\"queryRef\":\"Fact_Shipment.Late Deliveries\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Dim_Route\",\"Type\":0},{\"Name\":\"b\",\"Entity\":\"Fact_Shipment\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"route_id\"},\"Name\":\"Dim_Route.route_id\",\"NativeReferenceName\":\"route_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Late Deliveries\"},\"Name\":\"Fact_Shipment.Late Deliveries\",\"NativeReferenceName\":\"Late Deliveries\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Late Deliveries\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        }
+      ]
+    },
+    {
+      "name": "DataQuality",
+      "displayName": "Data Quality Monitoring",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "ordinal": 3,
+      "config": "{\"name\":\"DataQuality\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":1280,\"height\":720}}],\"singleVisualGroup\":null}",
+      "filters": "[]",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 1,
+          "width": 1240,
+          "height": 34,
+          "config": "{\"name\":\"5bf68b13aedcfe0e3a95\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":8,\"z\":1,\"width\":1240,\"height\":34}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Data Quality Monitoring\",\"textStyle\":{\"fontSize\":20,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 44,
+          "z": 1,
+          "width": 1240,
+          "height": 20,
+          "config": "{\"name\":\"302f0f67b1fdd4d07eea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":44,\"z\":1,\"width\":1240,\"height\":20}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Synthetic data (seed 42) \\u2014 fictional Kolkata cold-chain distributor, 2025. Not real company data. Headline KPIs are network-level; use the slicers to explore.\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 70,
+          "config": "{\"name\":\"2b645d0b79bd78baf8dd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":68,\"z\":1,\"width\":300,\"height\":70}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Raw records\",\"textStyle\":{\"fontSize\":12,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"1,504,500\",\"textStyle\":{\"fontSize\":18,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"shipments + scan events\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 340,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 70,
+          "config": "{\"name\":\"3a07c6dfc2909be6740a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":340,\"y\":68,\"z\":1,\"width\":300,\"height\":70}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Clean records\",\"textStyle\":{\"fontSize\":12,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"1,494,000\",\"textStyle\":{\"fontSize\":18,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"4,500 duplicate copies + 6,000 orphan scans removed\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 68,
+          "z": 1,
+          "width": 300,
+          "height": 70,
+          "config": "{\"name\":\"33a61dcc925306bb4d6c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":68,\"z\":1,\"width\":300,\"height\":70}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Shipments 304,500 \\u2192 300,000\",\"textStyle\":{\"fontSize\":12,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"Scans 1,200,000 \\u2192 1,194,000\",\"textStyle\":{\"fontSize\":12,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"reconciliation within 0.5% tolerance\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 980,
+          "y": 68,
+          "z": 1,
+          "width": 280,
+          "height": 70,
+          "config": "{\"name\":\"58064866f3b02b74b0f7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980,\"y\":68,\"z\":1,\"width\":280,\"height\":70}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Validation\",\"textStyle\":{\"fontSize\":12,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"38 / 38 checks PASS\",\"textStyle\":{\"fontSize\":18,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"0% variance\",\"textStyle\":{\"fontSize\":11,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 150,
+          "z": 1,
+          "width": 620,
+          "height": 220,
+          "config": "{\"name\":\"86428ee8167aaa30430a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":150,\"z\":1,\"width\":620,\"height\":220}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Cleaning_Log.Issue\"},{\"queryRef\":\"Cleaning_Log.Records Affected\"},{\"queryRef\":\"Cleaning_Log.Cleaning Action\"},{\"queryRef\":\"Cleaning_Log.Reason\"},{\"queryRef\":\"Cleaning_Log.Validation\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Cleaning_Log\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Issue\"},\"Name\":\"Cleaning_Log.Issue\",\"NativeReferenceName\":\"Issue\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Records Affected\"},\"Name\":\"Cleaning_Log.Records Affected\",\"NativeReferenceName\":\"Records Affected\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Cleaning Action\"},\"Name\":\"Cleaning_Log.Cleaning Action\",\"NativeReferenceName\":\"Cleaning Action\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Reason\"},\"Name\":\"Cleaning_Log.Reason\",\"NativeReferenceName\":\"Reason\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Validation\"},\"Name\":\"Cleaning_Log.Validation\",\"NativeReferenceName\":\"Validation\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 150,
+          "z": 1,
+          "width": 600,
+          "height": 220,
+          "config": "{\"name\":\"377698250b4735cfec22\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":150,\"z\":1,\"width\":600,\"height\":220}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DQ_Missing.column\"}],\"Y\":[{\"queryRef\":\"DQ_Missing.missing_pct\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"DQ_Missing\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"column\"},\"Name\":\"DQ_Missing.column\",\"NativeReferenceName\":\"column\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"missing_pct\"},\"Name\":\"DQ_Missing.missing_pct\",\"NativeReferenceName\":\"missing_pct\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"missing_pct\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 386,
+          "z": 1,
+          "width": 620,
+          "height": 92,
+          "config": "{\"name\":\"244741b56ba8a6c6e8ee\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":386,\"z\":1,\"width\":620,\"height\":92}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Orphan scans & re-sequencing\",\"textStyle\":{\"fontSize\":13,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"6,000 orphan scan events removed; 0 remain. 29,287 out-of-order scan events in 20,914 shipments re-sequenced by UTC timestamp; 0 out-of-order pairs remain after cleaning.\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F1F1F\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 386,
+          "z": 1,
+          "width": 600,
+          "height": 92,
+          "config": "{\"name\":\"2a4e1ca545cd019680f4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":386,\"z\":1,\"width\":600,\"height\":92}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Negative dwell\",\"textStyle\":{\"fontSize\":13,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"Negative dwell pairs flagged and excluded from the dwell KPI (not corrected): destination 2,885, origin 18 shipments (post-dedupe counts; raw profile: 2,905 / 39).\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F1F1F\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 492,
+          "z": 1,
+          "width": 620,
+          "height": 200,
+          "config": "{\"name\":\"7ac7fb4977a9eff10c49\",\"layouts\":[{\"id\":0,\"position\":{\"x\":20,\"y\":492,\"z\":1,\"width\":620,\"height\":200}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Monthly_KPI.month\"},{\"queryRef\":\"Monthly_KPI.shipments\"},{\"queryRef\":\"Monthly_KPI.otd_pct\"},{\"queryRef\":\"Monthly_KPI.cost_per_shipment_inr\"},{\"queryRef\":\"Monthly_KPI.avg_dwell_dest_h\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Monthly_KPI\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"month\"},\"Name\":\"Monthly_KPI.month\",\"NativeReferenceName\":\"month\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"shipments\"},\"Name\":\"Monthly_KPI.shipments\",\"NativeReferenceName\":\"shipments\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"otd_pct\"},\"Name\":\"Monthly_KPI.otd_pct\",\"NativeReferenceName\":\"otd_pct\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"cost_per_shipment_inr\"},\"Name\":\"Monthly_KPI.cost_per_shipment_inr\",\"NativeReferenceName\":\"cost_per_shipment_inr\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"avg_dwell_dest_h\"},\"Name\":\"Monthly_KPI.avg_dwell_dest_h\",\"NativeReferenceName\":\"avg_dwell_dest_h\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]"
+        },
+        {
+          "x": 660,
+          "y": 492,
+          "z": 1,
+          "width": 600,
+          "height": 200,
+          "config": "{\"name\":\"137df90462f54334ed07\",\"layouts\":[{\"id\":0,\"position\":{\"x\":660,\"y\":492,\"z\":1,\"width\":600,\"height\":200}}],\"singleVisual\":{\"visualType\":\"textbox\",\"projections\":{},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"What was NOT done\",\"textStyle\":{\"fontSize\":13,\"bold\":true,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F3864\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"No imputation: missing costs/timestamps stay excluded via validity flags; missing category/vehicle kept as Unknown/UNKNOWN members. No dwell-to-rupees conversion (no verified per-hour cost). Naive timestamps assumed UTC (rule C3). No true YoY \\u2014 H1 vs H2 2025 only.\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#1F1F1F\"}}],\"horizontalTextAlignment\":\"left\"},{\"textRuns\":[{\"value\":\"Profile counts are pre-dedupe (raw) while cleaning-log counts are post-dedupe \\u2014 both are correct at their stage.\",\"textStyle\":{\"fontSize\":12,\"bold\":false,\"fontFamily\":\"Segoe UI\",\"color\":\"#595959\"}}],\"horizontalTextAlignment\":\"left\"}]}},\"vcObjects\":{\"background\":{\"show\":false},\"border\":{\"show\":false}}}}",
+          "filters": "[]"
+        }
+      ]
+    }
+  ]
+}

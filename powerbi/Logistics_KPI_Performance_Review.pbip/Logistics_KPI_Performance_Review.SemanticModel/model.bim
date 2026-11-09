@@ -1,0 +1,1440 @@
+{
+  "name": "Logistics KPI Performance Review",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "sourceQueryCulture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "defaultMode": "import",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "tables": [
+      {
+        "name": "Fact_Shipment",
+        "columns": [
+          {
+            "name": "shipment_id",
+            "dataType": "string",
+            "sourceColumn": "shipment_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "shipment_date",
+            "dataType": "dateTime",
+            "sourceColumn": "shipment_date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "origin_hub",
+            "dataType": "string",
+            "sourceColumn": "origin_hub",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "destination_hub",
+            "dataType": "string",
+            "sourceColumn": "destination_hub",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "route_id",
+            "dataType": "string",
+            "sourceColumn": "route_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "vehicle_id",
+            "dataType": "string",
+            "sourceColumn": "vehicle_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "vehicle_type",
+            "dataType": "string",
+            "sourceColumn": "vehicle_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "warehouse_id",
+            "dataType": "string",
+            "sourceColumn": "warehouse_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category",
+            "dataType": "string",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "promised_ts_utc",
+            "dataType": "dateTime",
+            "sourceColumn": "promised_ts_utc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "actual_ts_utc",
+            "dataType": "dateTime",
+            "sourceColumn": "actual_ts_utc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "shipment_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "shipment_cost_inr",
+            "summarizeBy": "none",
+            "formatString": "#,##0.00"
+          },
+          {
+            "name": "cost_valid",
+            "dataType": "boolean",
+            "sourceColumn": "cost_valid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "on_time",
+            "dataType": "boolean",
+            "sourceColumn": "on_time",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_hours",
+            "dataType": "double",
+            "sourceColumn": "late_hours",
+            "summarizeBy": "none",
+            "formatString": "0.00"
+          },
+          {
+            "name": "dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "dwell_origin_h",
+            "summarizeBy": "none",
+            "formatString": "0.00"
+          },
+          {
+            "name": "dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "dwell_dest_h",
+            "summarizeBy": "none",
+            "formatString": "0.00"
+          },
+          {
+            "name": "dwell_avg_h",
+            "dataType": "double",
+            "sourceColumn": "dwell_avg_h",
+            "summarizeBy": "none",
+            "formatString": "0.00"
+          },
+          {
+            "name": "dwell_origin_valid",
+            "dataType": "boolean",
+            "sourceColumn": "dwell_origin_valid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dwell_dest_valid",
+            "dataType": "boolean",
+            "sourceColumn": "dwell_dest_valid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Half",
+            "dataType": "string",
+            "expression": "IF ( MONTH ( Fact_Shipment[shipment_date] ) <= 6, \"H1 2025\", \"H2 2025\" )",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Shipment",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Fact_Shipment.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=22, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipment_id\", type text}}, {{\"shipment_date\", type date}}, {{\"month\", type text}}, {{\"origin_hub\", type text}}, {{\"destination_hub\", type text}}, {{\"route_id\", type text}}, {{\"vehicle_id\", type text}}, {{\"vehicle_type\", type text}}, {{\"warehouse_id\", type text}}, {{\"category\", type text}}, {{\"status\", type text}}, {{\"promised_ts_utc\", type datetime}}, {{\"actual_ts_utc\", type datetime}}, {{\"shipment_cost_inr\", type number}}, {{\"cost_valid\", type logical}}, {{\"on_time\", type logical}}, {{\"late_hours\", type number}}, {{\"dwell_origin_h\", type number}}, {{\"dwell_dest_h\", type number}}, {{\"dwell_avg_h\", type number}}, {{\"dwell_origin_valid\", type logical}}, {{\"dwell_dest_valid\", type logical}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Shipments",
+            "expression": "COUNTROWS ( Fact_Shipment )",
+            "formatString": "#,##0",
+            "description": "Total rows in the trusted shipment table."
+          },
+          {
+            "name": "OTD Eligible Shipments",
+            "expression": "CALCULATE (\n    COUNTROWS ( Fact_Shipment ),\n    Fact_Shipment[status] IN { \"Delivered\", \"Delayed\" },\n    NOT ( ISBLANK ( Fact_Shipment[on_time] ) )\n)",
+            "formatString": "#,##0",
+            "description": "Delivered/Delayed shipments with both timestamps valid."
+          },
+          {
+            "name": "On-Time Deliveries",
+            "expression": "CALCULATE (\n    COUNTROWS ( Fact_Shipment ),\n    Fact_Shipment[status] IN { \"Delivered\", \"Delayed\" },\n    Fact_Shipment[on_time] = TRUE ()\n)",
+            "formatString": "#,##0",
+            "description": "Eligible shipments delivered on or before the promised time."
+          },
+          {
+            "name": "Late Deliveries",
+            "expression": "CALCULATE (\n    COUNTROWS ( Fact_Shipment ),\n    Fact_Shipment[status] IN { \"Delivered\", \"Delayed\" },\n    Fact_Shipment[on_time] = FALSE ()\n)",
+            "formatString": "#,##0",
+            "description": "Eligible shipments delivered after the promised time."
+          },
+          {
+            "name": "OTD %",
+            "expression": "DIVIDE ( [On-Time Deliveries], [OTD Eligible Shipments] )",
+            "formatString": "0.00%",
+            "description": "Full-table value: 76.48%."
+          },
+          {
+            "name": "OTD % (Origin Hub)",
+            "expression": "CALCULATE (\n    [OTD %],\n    USERELATIONSHIP ( Fact_Shipment[origin_hub], Dim_Hub[hub_id] )\n)",
+            "formatString": "0.00%",
+            "description": "OTD sliced by ORIGIN hub through the inactive relationship."
+          },
+          {
+            "name": "OTD % MoM Change (pp)",
+            "expression": "VAR CurrentOTD = [OTD %]\nVAR PriorOTD =\n    CALCULATE ( [OTD %], PREVIOUSMONTH ( Dim_Date[date] ) )\nRETURN\n    IF ( NOT ISBLANK ( PriorOTD ), ( CurrentOTD - PriorOTD ) * 100 )",
+            "formatString": "0.00",
+            "description": "Month-over-month change in percentage points. Jan 2025 is blank."
+          },
+          {
+            "name": "OTD % H1 2025",
+            "expression": "CALCULATE ( [OTD %], Fact_Shipment[Half] = \"H1 2025\" )",
+            "formatString": "0.00%",
+            "description": "Full-table value: 76.49%."
+          },
+          {
+            "name": "OTD % H2 2025",
+            "expression": "CALCULATE ( [OTD %], Fact_Shipment[Half] = \"H2 2025\" )",
+            "formatString": "0.00%",
+            "description": "Full-table value: 76.47%."
+          },
+          {
+            "name": "OTD % Half-Year Change (pp)",
+            "expression": "( [OTD % H2 2025] - [OTD % H1 2025] ) * 100",
+            "formatString": "0.00",
+            "description": "Prior-period comparison (H1 vs H2 2025). NOT year-over-year. Full-table value: -0.02 pp."
+          },
+          {
+            "name": "Total Valid Cost (INR)",
+            "expression": "CALCULATE (\n    SUM ( Fact_Shipment[shipment_cost_inr] ),\n    Fact_Shipment[cost_valid] = TRUE ()\n)",
+            "formatString": "₹#,##0",
+            "description": "Full-table value: ₹1,20,40,74,834."
+          },
+          {
+            "name": "Valid Cost Shipments",
+            "expression": "CALCULATE (\n    COUNTROWS ( Fact_Shipment ),\n    Fact_Shipment[cost_valid] = TRUE ()\n)",
+            "formatString": "#,##0",
+            "description": "Full-table value: 293,485 of 300,000 shipments."
+          },
+          {
+            "name": "Cost per Shipment (INR)",
+            "expression": "DIVIDE ( [Total Valid Cost (INR)], [Valid Cost Shipments] )",
+            "formatString": "₹#,##0.00",
+            "description": "Full-table value: ₹4,102.68."
+          },
+          {
+            "name": "Cost per Shipment MoM Change (%)",
+            "expression": "VAR CurrentCost = [Cost per Shipment (INR)]\nVAR PriorCost =\n    CALCULATE ( [Cost per Shipment (INR)], PREVIOUSMONTH ( Dim_Date[date] ) )\nRETURN\n    IF ( NOT ISBLANK ( PriorCost ), DIVIDE ( CurrentCost - PriorCost, PriorCost ) )",
+            "formatString": "0.00%",
+            "description": "Month-over-month change in cost per shipment."
+          },
+          {
+            "name": "Avg Destination Dwell (h)",
+            "expression": "CALCULATE (\n    AVERAGE ( Fact_Shipment[dwell_dest_h] ),\n    Fact_Shipment[dwell_dest_valid] = TRUE (),\n    NOT ( ISBLANK ( Fact_Shipment[dwell_dest_h] ) )\n)",
+            "formatString": "0.00",
+            "description": "Full-table value: 15.49 h."
+          },
+          {
+            "name": "Avg Origin Dwell (h)",
+            "expression": "CALCULATE (\n    AVERAGE ( Fact_Shipment[dwell_origin_h] ),\n    Fact_Shipment[dwell_origin_valid] = TRUE (),\n    NOT ( ISBLANK ( Fact_Shipment[dwell_origin_h] ) )\n)",
+            "formatString": "0.00",
+            "description": "Full-table value: 2.50 h."
+          },
+          {
+            "name": "Avg Combined Dwell (h)",
+            "expression": "AVERAGE ( Fact_Shipment[dwell_avg_h] )",
+            "formatString": "0.00",
+            "description": "Full-table value: 8.90 h."
+          },
+          {
+            "name": "Avg Destination Dwell MoM Change (%)",
+            "expression": "VAR CurrentDwell = [Avg Destination Dwell (h)]\nVAR PriorDwell =\n    CALCULATE ( [Avg Destination Dwell (h)], PREVIOUSMONTH ( Dim_Date[date] ) )\nRETURN\n    IF ( NOT ISBLANK ( PriorDwell ), DIVIDE ( CurrentDwell - PriorDwell, PriorDwell ) )",
+            "formatString": "0.00%",
+            "description": "Month-over-month change in average destination dwell."
+          },
+          {
+            "name": "Avg Late Hours",
+            "expression": "CALCULATE (\n    AVERAGE ( Fact_Shipment[late_hours] ),\n    NOT ( ISBLANK ( Fact_Shipment[late_hours] ) )\n)",
+            "formatString": "0.00",
+            "description": "Mean (actual - promised) in hours over eligible shipments."
+          },
+          {
+            "name": "Late Share of Eligible (%)",
+            "expression": "DIVIDE ( [Late Deliveries], [OTD Eligible Shipments] )",
+            "formatString": "0.00%",
+            "description": "Full-table value: 23.52% (100% - 76.48%)."
+          },
+          {
+            "name": "OTD Gap to 85% Target (pp)",
+            "expression": "( 0.85 - [OTD %] ) * 100",
+            "formatString": "0.00",
+            "description": "Positive = below the 85% Green threshold. Full-table value: +8.52 pp."
+          },
+          {
+            "name": "Shipments (Valid Cost %)",
+            "expression": "DIVIDE ( [Valid Cost Shipments], [Total Shipments] )",
+            "formatString": "0.00%",
+            "description": "Full-table value: 97.83%."
+          },
+          {
+            "name": "OTD RAG Status",
+            "expression": "VAR OTDValue = [OTD %]\nRETURN\n    SWITCH (\n        TRUE (),\n        ISBLANK ( OTDValue ), \"— No data\",\n        OTDValue >= 0.85, \"● Green — on target (≥ 85%)\",\n        OTDValue >= 0.75, \"● Amber — below target (75–85%)\",\n        \"● Red — needs action (< 75%)\"\n    )",
+            "description": "Thresholds are analyst-defined reporting conventions, not measured targets. Full-table value: Amber (76.48%)."
+          },
+          {
+            "name": "Cost RAG Status",
+            "expression": "VAR CostValue = [Cost per Shipment (INR)]\nRETURN\n    SWITCH (\n        TRUE (),\n        ISBLANK ( CostValue ), \"— No data\",\n        CostValue <= 4000, \"● Green — at or below ₹4,000\",\n        CostValue <= 4500, \"● Amber — ₹4,000–₹4,500\",\n        \"● Red — needs action (> ₹4,500)\"\n    )",
+            "description": "Full-table value: Amber (₹4,102.68)."
+          },
+          {
+            "name": "Dwell RAG Status",
+            "expression": "VAR DwellValue = [Avg Destination Dwell (h)]\nRETURN\n    SWITCH (\n        TRUE (),\n        ISBLANK ( DwellValue ), \"— No data\",\n        DwellValue <= 12, \"● Green — at or below 12 h\",\n        DwellValue <= 18, \"● Amber — 12–18 h\",\n        \"● Red — needs action (> 18 h)\"\n    )",
+            "description": "Full-table value: Amber (15.49 h)."
+          },
+          {
+            "name": "Network Scorecard Status",
+            "expression": "VAR OTDStatus =\n    SWITCH ( TRUE (), [OTD %] >= 0.85, \"Green\", [OTD %] >= 0.75, \"Amber\", \"Red\" )\nVAR CostStatus =\n    SWITCH (\n        TRUE (),\n        [Cost per Shipment (INR)] <= 4000, \"Green\",\n        [Cost per Shipment (INR)] <= 4500, \"Amber\",\n        \"Red\"\n    )\nVAR DwellStatus =\n    SWITCH (\n        TRUE (),\n        [Avg Destination Dwell (h)] <= 12, \"Green\",\n        [Avg Destination Dwell (h)] <= 18, \"Amber\",\n        \"Red\"\n    )\nVAR Greens =\n    ( IF ( OTDStatus = \"Green\", 1, 0 ) + IF ( CostStatus = \"Green\", 1, 0 ) + IF ( DwellStatus = \"Green\", 1, 0 ) )\nVAR Reds =\n    ( IF ( OTDStatus = \"Red\", 1, 0 ) + IF ( CostStatus = \"Red\", 1, 0 ) + IF ( DwellStatus = \"Red\", 1, 0 ) )\nRETURN\n    SWITCH (\n        TRUE (),\n        Reds > 0, \"● Red — \" & Reds & \" of 3 KPIs need action\",\n        Greens = 3, \"● Green — all 3 KPIs on target\",\n        \"● Amber — \" & Greens & \" of 3 KPIs on target, none Red\"\n    )",
+            "description": "Full-table value: ● Amber — 0 of 3 KPIs on target, none Red."
+          }
+        ]
+      },
+      {
+        "name": "Dim_Hub",
+        "columns": [
+          {
+            "name": "hub_id",
+            "dataType": "string",
+            "sourceColumn": "hub_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "hub_name",
+            "dataType": "string",
+            "sourceColumn": "hub_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "state",
+            "dataType": "string",
+            "sourceColumn": "state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "region",
+            "dataType": "string",
+            "sourceColumn": "region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_cold_chain",
+            "dataType": "boolean",
+            "sourceColumn": "is_cold_chain",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Hub",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Dim_Hub.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"hub_id\", type text}}, {{\"hub_name\", type text}}, {{\"state\", type text}}, {{\"region\", type text}}, {{\"is_cold_chain\", type logical}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Route",
+        "columns": [
+          {
+            "name": "route_id",
+            "dataType": "string",
+            "sourceColumn": "route_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "origin_hub",
+            "dataType": "string",
+            "sourceColumn": "origin_hub",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "destination_hub",
+            "dataType": "string",
+            "sourceColumn": "destination_hub",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "distance_km",
+            "dataType": "int64",
+            "sourceColumn": "distance_km",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "planned_transit_hours",
+            "dataType": "int64",
+            "sourceColumn": "planned_transit_hours",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Route",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Dim_Route.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"route_id\", type text}}, {{\"origin_hub\", type text}}, {{\"destination_hub\", type text}}, {{\"distance_km\", Int64.Type}}, {{\"planned_transit_hours\", Int64.Type}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Vehicle",
+        "columns": [
+          {
+            "name": "vehicle_id",
+            "dataType": "string",
+            "sourceColumn": "vehicle_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "vehicle_type",
+            "dataType": "string",
+            "sourceColumn": "vehicle_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "capacity_kg",
+            "dataType": "int64",
+            "sourceColumn": "capacity_kg",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "home_hub",
+            "dataType": "string",
+            "sourceColumn": "home_hub",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Vehicle",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Dim_Vehicle.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"vehicle_id\", type text}}, {{\"vehicle_type\", type text}}, {{\"capacity_kg\", Int64.Type}}, {{\"home_hub\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Warehouse",
+        "columns": [
+          {
+            "name": "warehouse_id",
+            "dataType": "string",
+            "sourceColumn": "warehouse_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "hub_id",
+            "dataType": "string",
+            "sourceColumn": "hub_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "warehouse_name",
+            "dataType": "string",
+            "sourceColumn": "warehouse_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "capacity_pallets",
+            "dataType": "int64",
+            "sourceColumn": "capacity_pallets",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Warehouse",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Dim_Warehouse.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"warehouse_id\", type text}}, {{\"hub_id\", type text}}, {{\"warehouse_name\", type text}}, {{\"capacity_pallets\", Int64.Type}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Category",
+        "columns": [
+          {
+            "name": "category",
+            "dataType": "string",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "base_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "base_cost_inr",
+            "summarizeBy": "none",
+            "formatString": "#,##0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Category",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Dim_Category.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"category\", type text}}, {{\"base_cost_inr\", type number}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Date",
+        "columns": [
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "sourceColumn": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "date_key",
+            "dataType": "int64",
+            "sourceColumn": "date_key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_name",
+            "dataType": "string",
+            "sourceColumn": "month_name",
+            "summarizeBy": "none",
+            "sortByColumn": "month"
+          },
+          {
+            "name": "quarter",
+            "dataType": "string",
+            "sourceColumn": "quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "day_of_week",
+            "dataType": "string",
+            "sourceColumn": "day_of_week",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Date",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Dim_Date.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"date\", type date}}, {{\"date_key\", Int64.Type}}, {{\"month\", type text}}, {{\"month_name\", type text}}, {{\"quarter\", type text}}, {{\"year\", Int64.Type}}, {{\"day_of_week\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Monthly_KPI",
+        "columns": [
+          {
+            "name": "shipments",
+            "dataType": "int64",
+            "sourceColumn": "shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_eligible",
+            "dataType": "int64",
+            "sourceColumn": "otd_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_pct",
+            "dataType": "double",
+            "sourceColumn": "otd_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_deliveries",
+            "dataType": "int64",
+            "sourceColumn": "late_deliveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_per_shipment_inr",
+            "dataType": "double",
+            "sourceColumn": "cost_per_shipment_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_valid_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "total_valid_cost_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "valid_cost_shipments",
+            "dataType": "int64",
+            "sourceColumn": "valid_cost_shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_dest_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_origin_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_combined_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_combined_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_mom_pp",
+            "dataType": "double",
+            "sourceColumn": "otd_mom_pp",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_mom_pct",
+            "dataType": "double",
+            "sourceColumn": "cost_mom_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dwell_mom_pct",
+            "dataType": "double",
+            "sourceColumn": "dwell_mom_pct",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Monthly_KPI",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Monthly_KPI.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipments\", Int64.Type}}, {{\"otd_eligible\", Int64.Type}}, {{\"otd_pct\", type number}}, {{\"late_deliveries\", Int64.Type}}, {{\"cost_per_shipment_inr\", type number}}, {{\"total_valid_cost_inr\", type number}}, {{\"valid_cost_shipments\", Int64.Type}}, {{\"avg_dwell_dest_h\", type number}}, {{\"avg_dwell_origin_h\", type number}}, {{\"avg_dwell_combined_h\", type number}}, {{\"month\", type text}}, {{\"otd_mom_pp\", type number}}, {{\"cost_mom_pct\", type number}}, {{\"dwell_mom_pct\", type number}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Half_Year_KPI",
+        "columns": [
+          {
+            "name": "shipments",
+            "dataType": "int64",
+            "sourceColumn": "shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_eligible",
+            "dataType": "int64",
+            "sourceColumn": "otd_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_pct",
+            "dataType": "double",
+            "sourceColumn": "otd_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_deliveries",
+            "dataType": "int64",
+            "sourceColumn": "late_deliveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_per_shipment_inr",
+            "dataType": "double",
+            "sourceColumn": "cost_per_shipment_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_valid_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "total_valid_cost_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "valid_cost_shipments",
+            "dataType": "int64",
+            "sourceColumn": "valid_cost_shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_dest_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_origin_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_combined_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_combined_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "half",
+            "dataType": "string",
+            "sourceColumn": "half",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Half_Year_KPI",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Half_Year_KPI.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipments\", Int64.Type}}, {{\"otd_eligible\", Int64.Type}}, {{\"otd_pct\", type number}}, {{\"late_deliveries\", Int64.Type}}, {{\"cost_per_shipment_inr\", type number}}, {{\"total_valid_cost_inr\", type number}}, {{\"valid_cost_shipments\", Int64.Type}}, {{\"avg_dwell_dest_h\", type number}}, {{\"avg_dwell_origin_h\", type number}}, {{\"avg_dwell_combined_h\", type number}}, {{\"half\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Hub_Destination_KPI",
+        "columns": [
+          {
+            "name": "shipments",
+            "dataType": "int64",
+            "sourceColumn": "shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_eligible",
+            "dataType": "int64",
+            "sourceColumn": "otd_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_pct",
+            "dataType": "double",
+            "sourceColumn": "otd_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_deliveries",
+            "dataType": "int64",
+            "sourceColumn": "late_deliveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_per_shipment_inr",
+            "dataType": "double",
+            "sourceColumn": "cost_per_shipment_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_valid_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "total_valid_cost_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "valid_cost_shipments",
+            "dataType": "int64",
+            "sourceColumn": "valid_cost_shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_dest_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_origin_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_combined_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_combined_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "destination_hub",
+            "dataType": "string",
+            "sourceColumn": "destination_hub",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Hub_Destination_KPI",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Hub_Destination_KPI.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipments\", Int64.Type}}, {{\"otd_eligible\", Int64.Type}}, {{\"otd_pct\", type number}}, {{\"late_deliveries\", Int64.Type}}, {{\"cost_per_shipment_inr\", type number}}, {{\"total_valid_cost_inr\", type number}}, {{\"valid_cost_shipments\", Int64.Type}}, {{\"avg_dwell_dest_h\", type number}}, {{\"avg_dwell_origin_h\", type number}}, {{\"avg_dwell_combined_h\", type number}}, {{\"destination_hub\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Route_KPI",
+        "columns": [
+          {
+            "name": "shipments",
+            "dataType": "int64",
+            "sourceColumn": "shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_eligible",
+            "dataType": "int64",
+            "sourceColumn": "otd_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_pct",
+            "dataType": "double",
+            "sourceColumn": "otd_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_deliveries",
+            "dataType": "int64",
+            "sourceColumn": "late_deliveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_per_shipment_inr",
+            "dataType": "double",
+            "sourceColumn": "cost_per_shipment_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_valid_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "total_valid_cost_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "valid_cost_shipments",
+            "dataType": "int64",
+            "sourceColumn": "valid_cost_shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_dest_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_origin_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_combined_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_combined_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "route_id",
+            "dataType": "string",
+            "sourceColumn": "route_id",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Route_KPI",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Route_KPI.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipments\", Int64.Type}}, {{\"otd_eligible\", Int64.Type}}, {{\"otd_pct\", type number}}, {{\"late_deliveries\", Int64.Type}}, {{\"cost_per_shipment_inr\", type number}}, {{\"total_valid_cost_inr\", type number}}, {{\"valid_cost_shipments\", Int64.Type}}, {{\"avg_dwell_dest_h\", type number}}, {{\"avg_dwell_origin_h\", type number}}, {{\"avg_dwell_combined_h\", type number}}, {{\"route_id\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Warehouse_KPI",
+        "columns": [
+          {
+            "name": "shipments",
+            "dataType": "int64",
+            "sourceColumn": "shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_eligible",
+            "dataType": "int64",
+            "sourceColumn": "otd_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_pct",
+            "dataType": "double",
+            "sourceColumn": "otd_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_deliveries",
+            "dataType": "int64",
+            "sourceColumn": "late_deliveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_per_shipment_inr",
+            "dataType": "double",
+            "sourceColumn": "cost_per_shipment_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_valid_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "total_valid_cost_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "valid_cost_shipments",
+            "dataType": "int64",
+            "sourceColumn": "valid_cost_shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_dest_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_origin_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_combined_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_combined_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "warehouse_id",
+            "dataType": "string",
+            "sourceColumn": "warehouse_id",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Warehouse_KPI",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Warehouse_KPI.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipments\", Int64.Type}}, {{\"otd_eligible\", Int64.Type}}, {{\"otd_pct\", type number}}, {{\"late_deliveries\", Int64.Type}}, {{\"cost_per_shipment_inr\", type number}}, {{\"total_valid_cost_inr\", type number}}, {{\"valid_cost_shipments\", Int64.Type}}, {{\"avg_dwell_dest_h\", type number}}, {{\"avg_dwell_origin_h\", type number}}, {{\"avg_dwell_combined_h\", type number}}, {{\"warehouse_id\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Category_KPI",
+        "columns": [
+          {
+            "name": "shipments",
+            "dataType": "int64",
+            "sourceColumn": "shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_eligible",
+            "dataType": "int64",
+            "sourceColumn": "otd_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "otd_pct",
+            "dataType": "double",
+            "sourceColumn": "otd_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "late_deliveries",
+            "dataType": "int64",
+            "sourceColumn": "late_deliveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "cost_per_shipment_inr",
+            "dataType": "double",
+            "sourceColumn": "cost_per_shipment_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_valid_cost_inr",
+            "dataType": "double",
+            "sourceColumn": "total_valid_cost_inr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "valid_cost_shipments",
+            "dataType": "int64",
+            "sourceColumn": "valid_cost_shipments",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_dest_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_dest_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_origin_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_origin_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "avg_dwell_combined_h",
+            "dataType": "double",
+            "sourceColumn": "avg_dwell_combined_h",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "category",
+            "dataType": "string",
+            "sourceColumn": "category",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Category_KPI",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Category_KPI.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"shipments\", Int64.Type}}, {{\"otd_eligible\", Int64.Type}}, {{\"otd_pct\", type number}}, {{\"late_deliveries\", Int64.Type}}, {{\"cost_per_shipment_inr\", type number}}, {{\"total_valid_cost_inr\", type number}}, {{\"valid_cost_shipments\", Int64.Type}}, {{\"avg_dwell_dest_h\", type number}}, {{\"avg_dwell_origin_h\", type number}}, {{\"avg_dwell_combined_h\", type number}}, {{\"category\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Cleaning_Log",
+        "columns": [
+          {
+            "name": "Issue",
+            "dataType": "string",
+            "sourceColumn": "Issue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Records Affected",
+            "dataType": "string",
+            "sourceColumn": "Records Affected",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cleaning Action",
+            "dataType": "string",
+            "sourceColumn": "Cleaning Action",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Reason",
+            "dataType": "string",
+            "sourceColumn": "Reason",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Validation",
+            "dataType": "string",
+            "sourceColumn": "Validation",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Cleaning_Log",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"Cleaning_Log.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"Issue\", type text}}, {{\"Records Affected\", type text}}, {{\"Cleaning Action\", type text}}, {{\"Reason\", type text}}, {{\"Validation\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DQ_Missing",
+        "columns": [
+          {
+            "name": "table",
+            "dataType": "string",
+            "sourceColumn": "table",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "column",
+            "dataType": "string",
+            "sourceColumn": "column",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dtype",
+            "dataType": "string",
+            "sourceColumn": "dtype",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_records",
+            "dataType": "int64",
+            "sourceColumn": "total_records",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_values",
+            "dataType": "int64",
+            "sourceColumn": "missing_values",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_pct",
+            "dataType": "double",
+            "sourceColumn": "missing_pct",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unique_values",
+            "dataType": "int64",
+            "sourceColumn": "unique_values",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DQ_Missing",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"DQ_Missing.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"table\", type text}}, {{\"column\", type text}}, {{\"dtype\", type text}}, {{\"total_records\", Int64.Type}}, {{\"missing_values\", Int64.Type}}, {{\"missing_pct\", type number}}, {{\"unique_values\", Int64.Type}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DQ_Summary",
+        "columns": [
+          {
+            "name": "check",
+            "dataType": "string",
+            "sourceColumn": "check",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "value",
+            "dataType": "string",
+            "sourceColumn": "value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DQ_Summary",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    FilePath = Text.Combine({DataFolder, \"DQ_Summary.csv\"}, \"\\\"),",
+                "    Source = Csv.Document(File.Contents(FilePath),",
+                "        [Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Promoted, {{{\"check\", type text}}, {{\"value\", type text}}, {{\"status\", type text}}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "rel_00_Fact_Shipment_destination_hub_to_Dim_Hub_hub_id",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "destination_hub",
+        "toTable": "Dim_Hub",
+        "toColumn": "hub_id",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "rel_01_Fact_Shipment_origin_hub_to_Dim_Hub_hub_id",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "origin_hub",
+        "toTable": "Dim_Hub",
+        "toColumn": "hub_id",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": false
+      },
+      {
+        "name": "rel_02_Fact_Shipment_route_id_to_Dim_Route_route_id",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "route_id",
+        "toTable": "Dim_Route",
+        "toColumn": "route_id",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "rel_03_Fact_Shipment_vehicle_id_to_Dim_Vehicle_vehicle_id",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "vehicle_id",
+        "toTable": "Dim_Vehicle",
+        "toColumn": "vehicle_id",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "rel_04_Fact_Shipment_category_to_Dim_Category_category",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "category",
+        "toTable": "Dim_Category",
+        "toColumn": "category",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "rel_05_Fact_Shipment_warehouse_id_to_Dim_Warehouse_warehouse_id",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "warehouse_id",
+        "toTable": "Dim_Warehouse",
+        "toColumn": "warehouse_id",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "rel_06_Fact_Shipment_shipment_date_to_Dim_Date_date",
+        "fromTable": "Fact_Shipment",
+        "fromColumn": "shipment_date",
+        "toTable": "Dim_Date",
+        "toColumn": "date",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true,
+        "joinOnDateBehavior": "dateAndTime"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "description": "Folder containing the powerbi/data CSVs (e.g. C:\\Users\\Khushi\\Logistics-KPI-Performance-Review\\powerbi\\data\\). Desktop prompts for it on first open/refresh. Must end with a backslash."
+      }
+    ]
+  }
+}

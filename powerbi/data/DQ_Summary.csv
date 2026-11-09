@@ -1,0 +1,31 @@
+check,value,status
+Raw records (shipments + scan events),"1,504,500",Recorded
+Clean records (shipments + scan events),"1,494,000",Recorded
+Shipments raw -> clean,"304,500 -> 300,000","4,500 duplicate copies removed"
+Scan events raw -> clean,"1,200,000 -> 1,194,000","6,000 orphan scans removed"
+Validation checks passed,38 / 38 (0% variance),PASS
+Out-of-order scan events after cleaning,0,PASS
+duplicate_shipment_id_rows,9000,Recorded
+duplicate_shipment_ids_distinct,4500,Recorded
+duplicate_scan_event_id_rows,0,Recorded
+negative_cost_rows,2474,Recorded
+zero_cost_rows,1172,Recorded
+invalid_cost_rows,0,Recorded
+invalid_promised_ts_rows,3081,Recorded
+invalid_actual_ts_rows,2980,Recorded
+missing_promised_ts_rows,2407,Recorded
+missing_actual_ts_rows,3601,Recorded
+unrecognised_origin_hub_rows,0,Recorded
+messy_variant_origin_hub_rows,91486,Recorded
+unrecognised_destination_hub_rows,0,Recorded
+messy_variant_destination_hub_rows,92027,Recorded
+invalid_route_ref_rows,1548,Recorded
+invalid_vehicle_ref_rows,1557,Recorded
+missing_vehicle_rows,1455,Recorded
+missing_category_rows,873,Recorded
+invalid_scan_ts_rows,0,Recorded
+orphan_scan_rows,6000,Recorded
+out_of_order_scan_shipments,20914,Recorded
+out_of_order_scan_events,29287,Recorded
+negative_dwell_origin_hub_shipments,39,Recorded
+negative_dwell_dest_hub_shipments,2905,Recorded

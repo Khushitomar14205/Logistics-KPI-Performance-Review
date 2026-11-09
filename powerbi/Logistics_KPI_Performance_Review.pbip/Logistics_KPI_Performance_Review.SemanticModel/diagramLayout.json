@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "diagrams": [
+    {
+      "nodes": {
+        "Fact_Shipment": {
+          "x": 560,
+          "y": 120
+        },
+        "Dim_Hub": {
+          "x": 120,
+          "y": 40
+        },
+        "Dim_Route": {
+          "x": 120,
+          "y": 200
+        },
+        "Dim_Vehicle": {
+          "x": 120,
+          "y": 360
+        },
+        "Dim_Warehouse": {
+          "x": 120,
+          "y": 520
+        },
+        "Dim_Category": {
+          "x": 980,
+          "y": 40
+        },
+        "Dim_Date": {
+          "x": 980,
+          "y": 200
+        }
+      }
+    }
+  ]
+}
