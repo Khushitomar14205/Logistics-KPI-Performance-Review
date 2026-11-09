@@ -21,12 +21,12 @@
 - [x] [Content_Types].xml has UTF-8 BOM
 - [x] [Content_Types].xml lists every part — 8 overrides
 - [x] No DataModel part (template, not a .pbix)
-- [x] Version is UTF-16LE with BOM
 - [x] DataModelSchema is UTF-16LE with BOM
 - [x] Report/Layout is UTF-16LE with BOM
 - [x] Metadata is UTF-16LE with BOM
 - [x] Settings is UTF-16LE with BOM
 - [x] DiagramLayout is UTF-16LE with BOM
+- [x] Version is UTF-16LE without BOM and parses as a version — '1.28'
 
 ### C
 - [x] .pbip artifacts[] names the report only — [{'report': {'path': 'Logistics_KPI_Performance_Review.Report'}}]

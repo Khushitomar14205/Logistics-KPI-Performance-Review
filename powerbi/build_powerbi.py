@@ -999,8 +999,11 @@ def build_pbit(model: dict, report: dict) -> Path:
                            culture="en-US",
                            description="Logistics KPI Performance Review — "
                                        "synthetic cold-chain data (seed 42), 2025.")
-    # Text parts are UTF-16LE with BOM, as in real Desktop files.
-    b.add_part("Version", _utf16le("1.28"), content_type="application/json")
+    # Text parts are UTF-16LE with BOM, as in real Desktop files — EXCEPT
+    # Version, which Desktop's ValidateVersion rejects if it carries a BOM
+    # ("'﻿1.28' is not a valid .pbix file version number", Desktop Oct 2026).
+    b.add_part("Version", "1.28".encode("utf-16-le"),
+               content_type="application/json")
     b.add_part("DataModelSchema",
                _utf16le(json.dumps(model, indent=2, ensure_ascii=False)),
                content_type="application/json")

@@ -114,7 +114,7 @@ def section_b():
           f"unlisted: {missing}" if missing else f"{len(overrides)} overrides")
     check("B", "No DataModel part (template, not a .pbix)",
           "DataModel" not in names)
-    for part in ("Version", "DataModelSchema", "Report/Layout", "Metadata",
+    for part in ("DataModelSchema", "Report/Layout", "Metadata",
                  "Settings", "DiagramLayout"):
         raw = z.read(part)
         ok = raw[:2] == b"\xff\xfe"
@@ -127,6 +127,13 @@ def section_b():
         else:
             detail = ""
         check("B", f"{part} is UTF-16LE with BOM", ok and dec, detail)
+    # Version must be UTF-16LE WITHOUT a BOM: Desktop's ValidateVersion
+    # rejects "'﻿1.28'" (BOM retained in the parsed string) as an invalid
+    # version number (observed Desktop Oct 2026, v2.159.1231.0).
+    raw = z.read("Version")
+    ver = raw.decode("utf-16-le")
+    check("B", "Version is UTF-16LE without BOM and parses as a version",
+          raw[:2] != b"\xff\xfe" and ver == "1.28", repr(ver))
     return z
 
 
